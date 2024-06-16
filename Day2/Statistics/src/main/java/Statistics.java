@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+// Author: Ebenezer Arkoh-Addo
 public class Statistics {
     public static  void main(String[] args){
         Scanner readInput = new Scanner(System.in);
@@ -10,10 +11,15 @@ public class Statistics {
         statistics(userInput);
     }
 
-    public static void statistics(String[] userInput){
-        int[] grades = new int[userInput.length];
+    /**
+     * Calculates and displays statistics based on the given array of grades.
+     *
+     * @param scores An array of strings representing students scores.
+     */
+    public static void statistics(String[] scores){
+        int[] grades = new int[scores.length];
         for (int i = 0; i < grades.length; i++) {
-            grades[i]= Integer.parseInt(userInput[i]);
+            grades[i]= Integer.parseInt(scores[i]);
         }
         int minGrade = 100;
         int maxGrade = 0;
