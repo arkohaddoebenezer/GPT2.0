@@ -1,18 +1,20 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
-public class Main {
+public class Statistics {
     public static  void main(String[] args){
         Scanner readInput = new Scanner(System.in);
 
         System.out.print("Enter grades: ");
         String[] userInput = readInput.nextLine().split(" ");
+        readInput.close();
+        statistics(userInput);
+    }
 
+    public static void statistics(String[] userInput){
         int[] grades = new int[userInput.length];
         for (int i = 0; i < grades.length; i++) {
             grades[i]= Integer.parseInt(userInput[i]);
         }
-
         int minGrade = 100;
         int maxGrade = 0;
         double sum = 0;
@@ -44,6 +46,7 @@ public class Main {
             if (stat>highestFrequency)
                 highestFrequency=stat;
         }
+        System.out.println("Values:\n");
         System.out.println("Maximum grade: " + maxGrade);
         System.out.println("Minimum grade: " + minGrade);
         System.out.println("Average grade: " + averageGrade);
@@ -65,4 +68,5 @@ public class Main {
         System.out.println("\tI    0-20    I   21-40   I   41-60   I   61-80   I   81-100   I");
 
     }
+
 }
