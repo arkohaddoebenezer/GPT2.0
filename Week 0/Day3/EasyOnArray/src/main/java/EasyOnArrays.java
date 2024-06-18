@@ -1,5 +1,3 @@
-package EasyOnArrays;
-
 public class EasyOnArrays {
 
     public void printLargestThreeElements(int[] elements){
