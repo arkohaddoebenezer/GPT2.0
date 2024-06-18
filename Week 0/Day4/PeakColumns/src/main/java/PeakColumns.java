@@ -7,25 +7,23 @@ import java.util.Scanner;
 public class PeakColumns {
 
     public static void main(String[] args) {
-
-        int[][] matrix = {
-            {12, 2, 4},
-            {17, 10, 1},
-            {92, 80, 79}
-        };
+        int[] getValuesForMatrix = getValuesForMatrix();
+        int[][] matrix = buildMatrix(getValuesForMatrix, getValuesForMatrix[getValuesForMatrix.length - 2],
+                getValuesForMatrix.length - 1);
         findPeakColumns(matrix);
     }
 
     /**
      * Finds the peak columns in a given matrix.
-     * A peak column is defined as a column where the element in that column is the maximum in its row
+     * A peak column is defined as a column where the element in that column is the
+     * maximum in its row
      * and the minimum in its column.
      *
      * @param matrix the matrix to search for peak columns
      */
     public static void findPeakColumns(int[][] matrix) {
         List<String> peakColumns = new ArrayList<>();
-        
+
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
                 int element = matrix[i][j];
@@ -34,7 +32,7 @@ public class PeakColumns {
                 }
             }
         }
-        
+
         if (peakColumns.isEmpty()) {
             System.out.println("No peak-columns found.");
         } else {
@@ -43,7 +41,8 @@ public class PeakColumns {
     }
 
     /**
-     * Checks if the given element is the maximum value in the specified row of the matrix.
+     * Checks if the given element is the maximum value in the specified row of the
+     * matrix.
      *
      * @param matrix  the matrix to check
      * @param row     the row index
@@ -60,12 +59,14 @@ public class PeakColumns {
     }
 
     /**
-     * Checks if the given element is the minimum value in the specified column of the matrix.
+     * Checks if the given element is the minimum value in the specified column of
+     * the matrix.
      *
      * @param matrix  the matrix to check
      * @param column  the column index to check
      * @param element the element to compare with
-     * @return true if the element is the minimum value in the column, false otherwise
+     * @return true if the element is the minimum value in the column, false
+     *         otherwise
      */
     public static boolean isMinInColumn(int[][] matrix, int column, int element) {
         for (int[] row : matrix) {
@@ -75,6 +76,7 @@ public class PeakColumns {
         }
         return true;
     }
+
     public static int[][] buildMatrix(int[] arr, int row, int col) {
 
         int[][] matrix = new int[row][col];
@@ -92,7 +94,8 @@ public class PeakColumns {
     /**
      * Reads user input to get the dimensions and values for a matrix.
      * 
-     * @return an array of integers representing the matrix values, The last 2 values of the array represent the dimensions
+     * @return an array of integers representing the matrix values, The last 2
+     *         values of the array represent the dimensions
      */
     public static int[] getValuesForMatrix() {
         Scanner sc = new Scanner(System.in);
@@ -111,8 +114,8 @@ public class PeakColumns {
                 for (int i = 0; i < row; i++) {
                     System.out.println("Enter values for row " + (i + 1) + " separated by a (,):");
                     String matrixInputs = sc.nextLine();
-                    if(!(matrixInputs.split(",").length==row)){
-                        throw  new Exception("The dimensions of your matrix requires "+row+" numbers per row");
+                    if (!(matrixInputs.split(",").length == row)) {
+                        throw new Exception("The dimensions of your matrix requires " + row + " numbers per row");
                     }
                     userInput.append(matrixInputs).append(",");
                 }
