@@ -1,2 +1,4 @@
-package org.trainingamalitech.librarymanagementsystem.model;public class Reservation {
+package org.trainingamalitech.librarymanagementsystem.model;
+
+public class Reservation {
 }

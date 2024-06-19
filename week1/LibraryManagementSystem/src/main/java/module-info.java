@@ -1,6 +1,7 @@
 module org.trainingamalitech.librarymanagementsystem {
     requires javafx.controls;
     requires javafx.fxml;
+    requires mysql.connector.java;
 
 
     opens org.trainingamalitech.librarymanagementsystem to javafx.fxml;

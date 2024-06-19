@@ -1,2 +1,4 @@
-package org.trainingamalitech.librarymanagementsystem.model;public class Transaction {
+package org.trainingamalitech.librarymanagementsystem.model;
+
+public class Transaction {
 }

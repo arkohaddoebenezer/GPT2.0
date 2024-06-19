@@ -1,2 +1,4 @@
-package org.trainingamalitech.librarymanagementsystem.controller;public class TransactionController {
+package org.trainingamalitech.librarymanagementsystem.controller;
+
+public class TransactionController {
 }

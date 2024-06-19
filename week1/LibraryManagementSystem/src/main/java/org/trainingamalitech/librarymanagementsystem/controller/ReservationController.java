@@ -1,2 +1,4 @@
-package org.trainingamalitech.librarymanagementsystem.controller;public class ReservationController {
+package org.trainingamalitech.librarymanagementsystem.controller;
+
+public class ReservationController {
 }
