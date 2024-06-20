@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="10" xmlns:fx="http://javafx.com/fxml" fx:controller="org.trainingamalitech.librarymanagementsystem.controller.views.BookViewController">
+    <TextField fx:id="isbnField" promptText="ISBN"/>
+    <TextField fx:id="titleField" promptText="Title"/>
+    <TextField fx:id="authorField" promptText="Author"/>
+    <TextField fx:id="publisherField" promptText="Publisher"/>
+    <TextField fx:id="yearField" promptText="Year"/>
+    <Button text="Add Book" onAction="#handleAddBook"/>
+
+    <TableView fx:id="bookTable">
+        <TableColumn text="ISBN" fx:id="isbnColumn"/>
+        <TableColumn text="Title" fx:id="titleColumn"/>
+        <TableColumn text="Author" fx:id="authorColumn"/>
+        <TableColumn text="Publisher" fx:id="publisherColumn"/>
+        <TableColumn text="Year" fx:id="yearColumn"/>
+        <TableColumn text="Available" fx:id="availableColumn"/>
+    </TableView>
+</VBox>

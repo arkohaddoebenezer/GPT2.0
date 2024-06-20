@@ -20,7 +20,6 @@ public class BookController {
             statement.setString(4, book.getPublisher());
             statement.setInt(5, book.getYear());
             statement.setBoolean(6, book.isAvailable());
-
             statement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -44,7 +43,7 @@ public class BookController {
                 book.setPublisher(resultSet.getString("publisher"));
                 book.setYear(resultSet.getInt("year"));
                 book.setAvailable(resultSet.getBoolean("isAvailable"));
-
+                System.out.println(resultSet.getString("title"));
                 books.add(book);
             }
         } catch (SQLException e) {
