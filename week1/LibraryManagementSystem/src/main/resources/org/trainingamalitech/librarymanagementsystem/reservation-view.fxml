@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="10" xmlns:fx="http://javafx.com/fxml" fx:controller="org.trainingamalitech.librarymanagementsystem.controller.views.ReservationViewController">
+    <TextField fx:id="reservationIdField" promptText="Reservation ID"/>
+    <TextField fx:id="bookIsbnField" promptText="Book ISBN"/>
+    <TextField fx:id="patronIdField" promptText="Patron ID"/>
+    <TextField fx:id="reservationDateField" promptText="Reservation Date (yyyy-mm-dd)"/>
+    <Button text="Add Reservation" onAction="#handleAddReservation"/>
+
+    <TableView fx:id="reservationTable">
+        <TableColumn text="Reservation ID" fx:id="reservationIdColumn"/>
+        <TableColumn text="Book ISBN" fx:id="bookIsbnColumn"/>
+        <TableColumn text="Patron ID" fx:id="patronIdColumn"/>
+        <TableColumn text="Reservation Date" fx:id="reservationDateColumn"/>
+    </TableView>
+</VBox>
