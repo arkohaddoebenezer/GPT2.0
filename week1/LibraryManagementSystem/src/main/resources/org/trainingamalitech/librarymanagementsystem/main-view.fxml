@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="10" xmlns:fx="http://javafx.com/fxml" fx:controller="org.trainingamalitech.librarymanagementsystem.controller.views.MainViewController">
+    <Button text="Manage Books" onAction="#handleManageBooks"/>
+    <Button text="Manage Patrons" onAction="#handleManagePatrons"/>
+    <Button text="Manage Transactions" onAction="#handleManageTransactions"/>
+    <Button text="Manage Reservations" onAction="#handleManageReservations"/>
+</VBox>

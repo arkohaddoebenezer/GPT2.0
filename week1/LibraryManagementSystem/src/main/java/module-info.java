@@ -8,4 +8,6 @@ module org.trainingamalitech.librarymanagementsystem {
     exports org.trainingamalitech.librarymanagementsystem;
     exports org.trainingamalitech.librarymanagementsystem.controller;
     opens org.trainingamalitech.librarymanagementsystem.controller to javafx.fxml;
+    exports org.trainingamalitech.librarymanagementsystem.controller.views;
+    opens org.trainingamalitech.librarymanagementsystem.controller.views to javafx.fxml;
 }
