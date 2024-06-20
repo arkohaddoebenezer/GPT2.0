@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="10" xmlns:fx="http://javafx.com/fxml" fx:controller="org.trainingamalitech.librarymanagementsystem.controller.views.TransactionViewController">
+    <TextField fx:id="transactionIdField" promptText="Transaction ID"/>
+    <TextField fx:id="bookIsbnField" promptText="Book ISBN"/>
+    <TextField fx:id="patronIdField" promptText="Patron ID"/>
+    <TextField fx:id="borrowDateField" promptText="Borrow Date (yyyy-mm-dd)"/>
+    <TextField fx:id="returnDateField" promptText="Return Date (yyyy-mm-dd)"/>
+    <Button text="Add Transaction" onAction="#handleAddTransaction"/>
+
+    <TableView fx:id="transactionTable">
+        <TableColumn text="Transaction ID" fx:id="transactionIdColumn"/>
+        <TableColumn text="Book ISBN" fx:id="bookIsbnColumn"/>
+        <TableColumn text="Patron ID" fx:id="patronIdColumn"/>
+        <TableColumn text="Borrow Date" fx:id="borrowDateColumn"/>
+        <TableColumn text="Return Date" fx:id="returnDateColumn"/>
+    </TableView>
+</VBox>
