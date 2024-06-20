@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<VBox alignment="CENTER" spacing="10" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.trainingamalitech.librarymanagementsystem.controller.views.PatronViewController">
+    <TextField fx:id="idField" promptText="ID"/>
+    <TextField fx:id="nameField" promptText="Name"/>
+    <TextField fx:id="addressField" promptText="Address"/>
+    <TextField fx:id="phoneNumberField" promptText="Phone Number"/>
+    <Button text="Add Patron" onAction="#handleAddPatron"/>
+
+    <TableView fx:id="patronTable">
+        <TableColumn text="ID" fx:id="idColumn"/>
+        <TableColumn text="Name" fx:id="nameColumn"/>
+        <TableColumn text="Address" fx:id="addressColumn"/>
+        <TableColumn text="Phone Number" fx:id="phoneNumberColumn"/>
+    </TableView>
+</VBox>
