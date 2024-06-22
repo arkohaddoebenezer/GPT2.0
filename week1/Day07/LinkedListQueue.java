@@ -4,22 +4,21 @@ public class LinkedListQueue {
 
     // Inner Node class
     private class Node {
-        int data;
+        int value;
         Node next;
 
-        Node(int data) {
-            this.data = data;
+        Node(int value) {
+            this.value = value;
             this.next = null;
         }
     }
 
-    // Constructor
+  
     public LinkedListQueue() {
         front = null;
         rear = null;
     }
 
-    // Enqueue method
     public void enqueue(int value) {
         Node newNode = new Node(value);
         if (isEmpty()) {
@@ -31,13 +30,12 @@ public class LinkedListQueue {
         }
     }
 
-    // Dequeue method
     public int dequeue() {
         if (isEmpty()) {
             System.out.println("Queue is empty.");
             return -1;
         } else {
-            int value = front.data;
+            int value = front.value;
             front = front.next;
             if (front == null) {
                 rear = null;
@@ -46,18 +44,8 @@ public class LinkedListQueue {
         }
     }
 
-    // Check if the queue is empty
     public boolean isEmpty() {
         return (front == null);
     }
 
-    // Peek method to view the front element
-    public int peekFront() {
-        if (isEmpty()) {
-            System.out.println("Queue is empty.");
-            return -1;
-        } else {
-            return front.data;
-        }
-    }
 }
