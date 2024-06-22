@@ -4,7 +4,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
-import org.trainingamalitech.librarymanagementsystem.controller.TransactionController;
+import org.trainingamalitech.librarymanagementsystem.services.TransactionController;
 import org.trainingamalitech.librarymanagementsystem.model.Transaction;
 
 import java.sql.Date;

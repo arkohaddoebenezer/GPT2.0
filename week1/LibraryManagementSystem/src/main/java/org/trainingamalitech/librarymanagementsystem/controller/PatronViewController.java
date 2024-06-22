@@ -5,7 +5,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
-import org.trainingamalitech.librarymanagementsystem.controller.PatronController;
+import org.trainingamalitech.librarymanagementsystem.services.PatronService;
 import org.trainingamalitech.librarymanagementsystem.model.Patron;
 
 public class PatronViewController {
@@ -30,11 +30,11 @@ public class PatronViewController {
     @FXML
     private TableColumn<Patron, String> phoneNumberColumn;
 
-    private PatronController patronController;
+    private PatronService patronService;
 
     @FXML
     public void initialize() {
-        patronController = new PatronController();
+        patronService = new PatronService();
 
         idColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
         nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
@@ -52,12 +52,12 @@ public class PatronViewController {
         String phoneNumber = phoneNumberField.getText();
 
         Patron patron = new Patron(id, name, address, phoneNumber);
-        patronController.addPatron(patron);
+        patronService.addPatron(patron);
 
         loadPatrons();
     }
 
     private void loadPatrons() {
-        patronTable.getItems().setAll(patronController.getAllPatrons());
+        patronTable.getItems().setAll(patronService.getAllPatrons());
     }
 }

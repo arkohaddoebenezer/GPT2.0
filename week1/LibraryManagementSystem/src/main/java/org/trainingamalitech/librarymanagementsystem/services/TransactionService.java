@@ -1,4 +1,4 @@
-package org.trainingamalitech.librarymanagementsystem.controller;
+package org.trainingamalitech.librarymanagementsystem.services;
 
 import org.trainingamalitech.librarymanagementsystem.model.Transaction;
 import org.trainingamalitech.librarymanagementsystem.util.DatabaseUtil;
@@ -11,17 +11,17 @@ public class TransactionController {
 
         // Method to add a new transaction
         public void addTransaction(Transaction transaction) {
-            String sql = "INSERT INTO Transaction (transactionId, bookIsbn, patronId, borrowDate, returnDate) VALUES (?, ?, ?, ?, ?)";
+
+            String sql = "INSERT INTO Transaction (transactionId, resourceId,resourceType, patronId, borrowDate, returnDate) VALUES (?,?,? ?, ?, ?)";
 
             try (Connection connection = DatabaseUtil.getConnection();
                  PreparedStatement statement = connection.prepareStatement(sql)) {
-
                 statement.setString(1, transaction.getTransactionId());
-                statement.setString(2, transaction.getBookIsbn());
-                statement.setString(3, transaction.getPatronId());
-                statement.setDate(4, new java.sql.Date(transaction.getBorrowDate().getTime()));
-                statement.setDate(5, transaction.getReturnDate() != null ? new java.sql.Date(transaction.getReturnDate().getTime()) : null);
-
+                statement.setString(2, transaction.getResourceID());
+                statement.setString(3, transaction.getResourceType());
+                statement.setString(4, transaction.getPatronId());
+                statement.setString(5, transaction.getBorrowDate());
+                statement.setString(6, transaction.getReturnDate());
                 statement.executeUpdate();
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -40,10 +40,10 @@ public class TransactionController {
                 while (resultSet.next()) {
                     Transaction transaction = new Transaction();
                     transaction.setTransactionId(resultSet.getString("transactionId"));
-                    transaction.setBookIsbn(resultSet.getString("bookIsbn"));
+                    transaction.setResourceID(resultSet.getString("bookIsbn"));
                     transaction.setPatronId(resultSet.getString("patronId"));
-                    transaction.setBorrowDate(resultSet.getDate("borrowDate"));
-                    transaction.setReturnDate(resultSet.getDate("returnDate"));
+                    transaction.setBorrowDate(resultSet.getString("borrowDate"));
+                    transaction.setReturnDate(resultSet.getString("returnDate"));
 
                     transactions.add(transaction);
                 }

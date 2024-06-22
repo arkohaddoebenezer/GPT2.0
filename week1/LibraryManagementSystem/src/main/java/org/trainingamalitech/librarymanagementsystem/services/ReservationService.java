@@ -1,4 +1,4 @@
-package org.trainingamalitech.librarymanagementsystem.controller;
+package org.trainingamalitech.librarymanagementsystem.services;
 
 import org.trainingamalitech.librarymanagementsystem.model.Reservation;
 import org.trainingamalitech.librarymanagementsystem.util.DatabaseUtil;
