@@ -1,75 +1,32 @@
 package org.trainingamalitech.librarymanagementsystem.model;
 
-public class Book {
-    private String isbn;
-    private String title;
-    private String author;
-    private String publisher;
-    private int year;
-    private boolean isAvailable;
+import org.trainingamalitech.librarymanagementsystem.enums.ResourceType;
+import org.trainingamalitech.librarymanagementsystem.services.BookService;
 
-    public Book() {
+import java.util.Calendar;
+import java.util.Date;
+
+public class Book extends LibraryResource{
+
+    public Book(String id, String title, String author, String publisher, int year){
+        super(id,title,author,publisher,year);
+
     }
-
-    public Book(String isbn, String title, String author, String publisher, int year, boolean isAvailable) {
-        this.isbn = isbn;
-        this.title = title;
-        this.author = author;
-        this.publisher = publisher;
-        this.year = year;
-        this.isAvailable = isAvailable;
-    }
-
-    public String getIsbn() {
-        return isbn;
-    }
-
-    public void setIsbn(String isbn) {
-        this.isbn = isbn;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(String author) {
-        this.author = author;
-    }
-
-    public String getPublisher() {
-        return publisher;
-    }
-
-    public void setPublisher(String publisher) {
-        this.publisher = publisher;
-    }
-
-    public int getYear() {
-        return year;
-    }
-
-    public void setYear(int year) {
-        this.year = year;
-    }
-
-    public boolean isAvailable() {
-        return isAvailable;
-    }
-
-    public void setAvailable(boolean isAvailable) {
-        this.isAvailable = isAvailable;
+    public Book(String id, String title, String author, String publisher, int year, String dateAdded,boolean availability) {
+        super(id, title, author, publisher, year, dateAdded,availability);
     }
 
     @Override
+    public ResourceType getResourceType() {
+        return ResourceType.BOOK;
+    }
+    public String getIsbn() {
+        return this.getId();
+    }
+
+
+    @Override
     public String toString() {
-        return "Book [ISBN=" + isbn + ", Title=" + title + ", Author=" + author + ", Publisher=" + publisher + ", Year=" + year + ", Available=" + isAvailable + "]";
+        return "Book [ISBN=" + this.getId() + ", Title=" + this.getTitle() + ", Author=" + this.getAuthor() + ", Publisher=" + this.getPublisher() + ", Year=" + this.getYear() + ", Available=" + this.getAvailability() + "]";
     }
 }

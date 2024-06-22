@@ -6,20 +6,20 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" spacing="10" xmlns:fx="http://javafx.com/fxml" fx:controller="org.trainingamalitech.librarymanagementsystem.controller.views.BookViewController">
+<VBox alignment="CENTER" spacing="10" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.trainingamalitech.librarymanagementsystem.controller.BookViewController">
     <TextField fx:id="isbnField" promptText="ISBN"/>
     <TextField fx:id="titleField" promptText="Title"/>
     <TextField fx:id="authorField" promptText="Author"/>
     <TextField fx:id="publisherField" promptText="Publisher"/>
     <TextField fx:id="yearField" promptText="Year"/>
     <Button text="Add Book" onAction="#handleAddBook"/>
+    <Button text="Delete Book" onAction="#handleRemoveBook"/>
 
     <TableView fx:id="bookTable">
         <TableColumn text="ISBN" fx:id="isbnColumn"/>
         <TableColumn text="Title" fx:id="titleColumn"/>
         <TableColumn text="Author" fx:id="authorColumn"/>
-        <TableColumn text="Publisher" fx:id="publisherColumn"/>
-        <TableColumn text="Year" fx:id="yearColumn"/>
-        <TableColumn text="Available" fx:id="availableColumn"/>
+        <TableColumn text="Date Added" fx:id="dateAddedColumn"/>
+        <TableColumn text="Available" fx:id="isAvailableColumn"/>
     </TableView>
 </VBox>

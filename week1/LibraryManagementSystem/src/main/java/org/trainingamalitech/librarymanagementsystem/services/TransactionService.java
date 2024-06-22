@@ -7,7 +7,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TransactionController {
+public class TransactionService {
 
         // Method to add a new transaction
         public void addTransaction(Transaction transaction) {

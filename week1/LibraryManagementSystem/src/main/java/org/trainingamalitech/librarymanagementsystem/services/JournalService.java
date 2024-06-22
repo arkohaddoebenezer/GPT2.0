@@ -9,44 +9,44 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BookService implements LibraryResourceOperations {
+public class JournalService implements LibraryResourceOperations {
 
     @Override
-    public LibraryResource saveResource(LibraryResource book) {
+    public LibraryResource saveResource(LibraryResource journal) {
 
         String sql = "INSERT INTO Book (isbn, title, author,date_added,isAvailable) VALUES (?, ?, ?, ?, ?)";
 
         try (Connection connection = DatabaseUtil.getConnection();
              PreparedStatement statement = connection.prepareStatement(sql)) {
-            statement.setString(1, book.getId());
-            statement.setString(2, book.getTitle());
-            statement.setString(3, book.getAuthor());
-            statement.setDate(4,(java.sql.Date)book.getDateAdded());
-            statement.setBoolean(5, book.getAvailability());
+            statement.setString(1, journal.getId());
+            statement.setString(2, journal.getTitle());
+            statement.setString(3, journal.getAuthor());
+            statement.setString(4,journal.getDateAdded());
+            statement.setBoolean(5, journal.getAvailability());
             statement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return book;
+        return journal;
     }
 
     @Override
-    public LibraryResource updateResource(LibraryResource book) {
+    public LibraryResource updateResource(LibraryResource journal) {
         return null;
     }
 
     @Override
-    public LibraryResource editResource(LibraryResource book) {
+    public LibraryResource editResource(LibraryResource journal) {
         return null;
     }
 
     @Override
-    public void deleteResource(LibraryResource book) {
+    public void deleteResource(String resourceIdentifier) {
         String sql = "DELETE FROM Book WHERE isbn = ?";
 
         try (Connection connection = DatabaseUtil.getConnection();
              PreparedStatement statement = connection.prepareStatement(sql)) {
-            statement.setString(1, book.getId());
+            statement.setString(1, resourceIdentifier);
             statement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -54,14 +54,14 @@ public class BookService implements LibraryResourceOperations {
     }
 
     @Override
-    public void updateAvailability(LibraryResource book,boolean availability) {
+    public void updateAvailability(LibraryResource journal,boolean availability) {
         String sql = "UPDATE Book SET isAvailable = ? WHERE isbn = ?";
 
         try (Connection connection = DatabaseUtil.getConnection();
              PreparedStatement statement = connection.prepareStatement(sql)) {
 
             statement.setBoolean(1, availability);
-            statement.setString(2, book.getId());
+            statement.setString(2, journal.getId());
 
             statement.executeUpdate();
         } catch (SQLException e) {
@@ -80,11 +80,13 @@ public class BookService implements LibraryResourceOperations {
                 String isbn = resultSet.getString("isbn");
                 String title = resultSet.getString("title");
                 String author = resultSet.getString("author");
-                Date dateAdded = resultSet.getDate("date_added");
+                String publisher = resultSet.getString("");
+                int year = resultSet.getInt("year");
+                String dateAdded = resultSet.getString("date_added");
                 boolean availability = resultSet.getBoolean("isAvailable");
-                Book book = new Book(isbn,title,author,dateAdded,availability);
+                Book journal = new Book(isbn,title,author,publisher,year,dateAdded,availability);
                 System.out.println("Title: "+resultSet.getString("title"));
-                books.add(book);
+                books.add(journal);
             }
         } catch (SQLException e) {
             e.printStackTrace();

@@ -7,7 +7,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ReservationController {
+public class ReservationService {
 
     // Method to add a new reservation
     public void addReservation(Reservation reservation) {

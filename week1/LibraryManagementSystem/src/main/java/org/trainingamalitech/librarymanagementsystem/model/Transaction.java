@@ -1,20 +1,20 @@
 package org.trainingamalitech.librarymanagementsystem.model;
 
-import java.util.Date;
-
 public class Transaction {
     private String transactionId;
-    private String bookIsbn;
+    private String resourceID;
+    private String resourceType;
     private String patronId;
-    private Date borrowDate;
-    private Date returnDate;
+    private String borrowDate;
+    private String returnDate;
 
     public Transaction() {
     }
 
-    public Transaction(String transactionId, String bookIsbn, String patronId, Date borrowDate, Date returnDate) {
-        this.transactionId = transactionId;
-        this.bookIsbn = bookIsbn;
+    public Transaction( String resourceID,String resourceType, String patronId, String borrowDate, String returnDate) {
+
+        this.resourceID = resourceID;
+        this.resourceType = resourceType;
         this.patronId = patronId;
         this.borrowDate = borrowDate;
         this.returnDate = returnDate;
@@ -28,12 +28,15 @@ public class Transaction {
         this.transactionId = transactionId;
     }
 
-    public String getBookIsbn() {
-        return bookIsbn;
+    public String getResourceID() {
+        return resourceID;
+    }
+    public String getResourceType(){
+        return  resourceType;
     }
 
-    public void setBookIsbn(String bookIsbn) {
-        this.bookIsbn = bookIsbn;
+    public void setResourceID(String resourceID) {
+        this.resourceID = resourceID;
     }
 
     public String getPatronId() {
@@ -44,25 +47,25 @@ public class Transaction {
         this.patronId = patronId;
     }
 
-    public Date getBorrowDate() {
+    public String getBorrowDate() {
         return borrowDate;
     }
 
-    public void setBorrowDate(Date borrowDate) {
+    public void setBorrowDate(String borrowDate) {
         this.borrowDate = borrowDate;
     }
 
-    public Date getReturnDate() {
+    public String getReturnDate() {
         return returnDate;
     }
 
-    public void setReturnDate(Date returnDate) {
+    public void setReturnDate(String returnDate) {
         this.returnDate = returnDate;
     }
 
     @Override
     public String toString() {
-        return "Transaction [TransactionID=" + transactionId + ", BookISBN=" + bookIsbn + ", PatronID=" + patronId + ", BorrowDate=" + borrowDate + ", ReturnDate=" + returnDate + "]";
+        return "Transaction [TransactionID=" + transactionId + ", BookISBN=" + resourceID + ", PatronID=" + patronId + ", BorrowDate=" + borrowDate + ", ReturnDate=" + returnDate + "]";
     }
 }
 

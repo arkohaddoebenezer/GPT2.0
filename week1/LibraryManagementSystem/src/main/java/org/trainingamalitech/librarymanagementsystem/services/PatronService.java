@@ -1,4 +1,4 @@
-package org.trainingamalitech.librarymanagementsystem.controller;
+package org.trainingamalitech.librarymanagementsystem.services;
 
 import org.trainingamalitech.librarymanagementsystem.model.Patron;
 import org.trainingamalitech.librarymanagementsystem.util.DatabaseUtil;
@@ -8,7 +8,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PatronController {
+public class PatronService {
 
     // Method to add a new patron
     public void addPatron(Patron patron) {

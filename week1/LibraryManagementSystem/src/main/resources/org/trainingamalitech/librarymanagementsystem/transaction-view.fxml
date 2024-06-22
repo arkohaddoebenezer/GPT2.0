@@ -6,9 +6,10 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" spacing="10" xmlns:fx="http://javafx.com/fxml" fx:controller="org.trainingamalitech.librarymanagementsystem.controller.views.TransactionViewController">
+<VBox alignment="CENTER" spacing="10" xmlns:fx="http://javafx.com/fxml" fx:controller="org.trainingamalitech.librarymanagementsystem.controller.TransactionViewController">
     <TextField fx:id="transactionIdField" promptText="Transaction ID"/>
-    <TextField fx:id="bookIsbnField" promptText="Book ISBN"/>
+    <TextField fx:id="resourceIdField" promptText="Book ISBN"/>
+    <TextField fx:id="resourceTypeField" promptText="Book ISBN"/>
     <TextField fx:id="patronIdField" promptText="Patron ID"/>
     <TextField fx:id="borrowDateField" promptText="Borrow Date (yyyy-mm-dd)"/>
     <TextField fx:id="returnDateField" promptText="Return Date (yyyy-mm-dd)"/>
@@ -16,7 +17,8 @@
 
     <TableView fx:id="transactionTable">
         <TableColumn text="Transaction ID" fx:id="transactionIdColumn"/>
-        <TableColumn text="Book ISBN" fx:id="bookIsbnColumn"/>
+        <TableColumn text="Book ISBN" fx:id="resourceIdColumn"/>
+        <TableColumn text="Book ISBN" fx:id="resourceTypeColumn"/>
         <TableColumn text="Patron ID" fx:id="patronIdColumn"/>
         <TableColumn text="Borrow Date" fx:id="borrowDateColumn"/>
         <TableColumn text="Return Date" fx:id="returnDateColumn"/>

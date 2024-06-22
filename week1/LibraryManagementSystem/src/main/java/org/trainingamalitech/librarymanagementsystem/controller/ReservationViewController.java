@@ -1,11 +1,11 @@
-package org.trainingamalitech.librarymanagementsystem.controller.views;
+package org.trainingamalitech.librarymanagementsystem.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
-import org.trainingamalitech.librarymanagementsystem.services.ReservationController;
+import org.trainingamalitech.librarymanagementsystem.services.ReservationService;
 import org.trainingamalitech.librarymanagementsystem.model.Reservation;
 
 import java.sql.Date;
@@ -23,11 +23,11 @@ public class ReservationViewController {
     @FXML private TableColumn<Reservation, String> patronIdColumn;
     @FXML private TableColumn<Reservation, Date> reservationDateColumn;
 
-    private ReservationController reservationController;
+    private ReservationService reservationService;
 
     @FXML
     public void initialize() {
-        reservationController = new ReservationController();
+        reservationService = new ReservationService();
 
         reservationIdColumn.setCellValueFactory(new PropertyValueFactory<>("reservationId"));
         bookIsbnColumn.setCellValueFactory(new PropertyValueFactory<>("bookIsbn"));
@@ -45,12 +45,12 @@ public class ReservationViewController {
         Date reservationDate = Date.valueOf(reservationDateField.getText());
 
         Reservation reservation = new Reservation(reservationId, bookIsbn, patronId, reservationDate);
-        reservationController.addReservation(reservation);
+        reservationService.addReservation(reservation);
 
         loadReservations();
     }
 
     private void loadReservations() {
-        reservationTable.getItems().setAll(reservationController.getAllReservations());
+        reservationTable.getItems().setAll(reservationService.getAllReservations());
     }
 }

@@ -1,4 +1,4 @@
-package org.trainingamalitech.librarymanagementsystem.controller.views;
+package org.trainingamalitech.librarymanagementsystem.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;

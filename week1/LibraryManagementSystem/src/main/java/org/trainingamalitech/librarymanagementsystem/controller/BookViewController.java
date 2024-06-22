@@ -1,4 +1,4 @@
-package org.trainingamalitech.librarymanagementsystem.controller.views;
+package org.trainingamalitech.librarymanagementsystem.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
@@ -6,38 +6,47 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import org.trainingamalitech.librarymanagementsystem.model.Book;
+import org.trainingamalitech.librarymanagementsystem.model.LibraryResource;
 import org.trainingamalitech.librarymanagementsystem.services.BookService;
-
-import java.util.Date;
 
 public class BookViewController {
 
-    @FXML private TextField isbnField;
-    @FXML private TextField titleField;
-    @FXML private TextField authorField;
-    @FXML private TextField publisherField;
-    @FXML private TextField yearField;
+    @FXML
+    private TextField isbnField;
+    @FXML
+    private TextField titleField;
+    @FXML
+    private TextField authorField;
+    @FXML
+    private TextField publisherField;
+    @FXML
+    private TextField yearField;
 
-    @FXML private TableView<Book> bookTable;
-    @FXML private TableColumn<Book, String> isbnColumn;
-    @FXML private TableColumn<Book, String> titleColumn;
-    @FXML private TableColumn<Book, String> authorColumn;
-    @FXML private TableColumn<Book, String> publisherColumn;
-    @FXML private TableColumn<Book, Integer> yearColumn;
-    @FXML private TableColumn<Book, Boolean> availableColumn;
+    @FXML
+    private TableView<Book> bookTable;
+    @FXML
+    private TableColumn<Book, String> isbnColumn;
+    @FXML
+    private TableColumn<Book, String> titleColumn;
+    @FXML
+    private TableColumn<Book, String> authorColumn;
+    @FXML
+    private TableColumn<Book, String> yearColumn;
+    @FXML
+    private TableColumn<Book, String> dateAddedColumn;
+    @FXML
+    private TableColumn<Book, Boolean> isAvailableColumn;
 
     private BookService bookService;
 
     @FXML
     public void initialize() {
         bookService = new BookService();
-
         isbnColumn.setCellValueFactory(new PropertyValueFactory<>("isbn"));
         titleColumn.setCellValueFactory(new PropertyValueFactory<>("title"));
         authorColumn.setCellValueFactory(new PropertyValueFactory<>("author"));
-        publisherColumn.setCellValueFactory(new PropertyValueFactory<>("publisher"));
-        yearColumn.setCellValueFactory(new PropertyValueFactory<>("year"));
-        availableColumn.setCellValueFactory(new PropertyValueFactory<>("available"));
+        dateAddedColumn.setCellValueFactory(new PropertyValueFactory<>("date_added"));
+        isAvailableColumn.setCellValueFactory(new PropertyValueFactory<>("isAvailable"));
 
         loadBooks();
     }
@@ -50,18 +59,46 @@ public class BookViewController {
             String author = authorField.getText();
             String publisher = publisherField.getText();
             int year = Integer.parseInt(yearField.getText());
-            Date dateAdded = new Date();
+            LibraryResource book = bookService.saveResource(new Book(isbn, title, author, publisher, year));
+            if (book.hasOperationErrors()) {
+                for (String errorMessage : book.operationErrors) {
+                    if (errorMessage.contains("isbn")||errorMessage.contains("book.PRIMARY"))
+                        isbnField.setText("ISBN Already exist in library or cannot be blank");
+                    else if (errorMessage.contains("title"))
+                        titleField.setText(errorMessage);
+                    else if (errorMessage.contains("author"))
+                        authorField.setText(errorMessage);
+                    else if (errorMessage.contains("publisher"))
+                        publisherField.setText(errorMessage);
+                    else
+                        yearField.setText(errorMessage);
+                }
+            } else {
+                loadBooks();
+            }
+        } catch (Exception e) {
+            if (e.getClass() == NumberFormatException.class) {
+                yearField.setText("Wrong input for the year");
+            }
+        }
+    }
 
-            Book book = new Book(isbn, title, author,dateAdded,publisher, year);
-            bookService.saveResource(book);
-
+    @FXML
+    private void handleRemoveBook() {
+        try {
+            String isbn = isbnField.getText();
+            String title = titleField.getText();
+            if (!isbn.isEmpty())
+                bookService.deleteResource(isbn);
+            else if (!title.isEmpty())
+                bookService.deleteResource(title);
             loadBooks();
         } catch (NumberFormatException e) {
-            System.out.println("Error: Year must be a number");
+            System.out.println(e.getMessage());
         }
     }
 
     private void loadBooks() {
-        bookTable.getItems().setAll(bookController.fetchAllBooks());
+        bookTable.getItems().setAll(bookService.fetchAllBooks());
     }
 }

@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.VBox?>
 <VBox alignment="CENTER" spacing="10" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="org.trainingamalitech.librarymanagementsystem.controller.views.PatronViewController">
+      fx:controller="org.trainingamalitech.librarymanagementsystem.controller.PatronViewController">
     <TextField fx:id="idField" promptText="ID"/>
     <TextField fx:id="nameField" promptText="Name"/>
     <TextField fx:id="addressField" promptText="Address"/>
