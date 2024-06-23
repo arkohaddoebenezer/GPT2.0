@@ -10,6 +10,8 @@ public class Reservation {
     private String patronId;
     private String reservationDate;
 
+    public Reservation(){}
+
     public Reservation(int reservationId, String resourceId, String resourceType, String patronId,
             String reservationDate) {
         this.reservationId = reservationId;
@@ -58,5 +60,9 @@ public class Reservation {
     public String toString() {
         return "Reservation [ReservationID=" + reservationId + ", resourceId=" + resourceId + ", PatronID=" + patronId
                 + ", ReservationDate=" + reservationDate + "]";
+    }
+
+    public void setReservationId(int reservationId) {
+        this.reservationId =reservationId;
     }
 }

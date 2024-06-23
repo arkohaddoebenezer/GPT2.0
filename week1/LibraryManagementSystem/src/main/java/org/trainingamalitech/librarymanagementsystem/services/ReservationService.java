@@ -17,7 +17,7 @@ public class ReservationService {
              PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setString(1, reservation.getResourceType());
             statement.setString(2, reservation.getPatronId());
-            statement.setDate(3, new java.sql.Date(reservation.getReservationDate().getTime()));
+            statement.setString(3, reservation.getReservationDate());
 
             statement.executeUpdate();
         } catch (SQLException e) {
@@ -36,10 +36,10 @@ public class ReservationService {
 
             while (resultSet.next()) {
                 Reservation reservation = new Reservation();
-                reservation.setReservationId(resultSet.getString("reservationId"));
+                reservation.setReservationId(resultSet.getInt("reservationId"));
                 reservation.setResourceId(resultSet.getString("resourceId"));
                 reservation.setPatronId(resultSet.getString("patronId"));
-                reservation.setReservationDate(resultSet.getDate("reservationDate"));
+                reservation.setReservationDate(resultSet.getString("reservationDate"));
 
                 reservations.add(reservation);
             }

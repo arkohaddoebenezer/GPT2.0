@@ -16,7 +16,7 @@ public class TransactionService {
 
             try (Connection connection = DatabaseUtil.getConnection();
                  PreparedStatement statement = connection.prepareStatement(sql)) {
-                statement.setString(1, transaction.getTransactionId());
+                statement.setInt(1, transaction.getTransactionId());
                 statement.setString(2, transaction.getResourceID());
                 statement.setString(3, transaction.getResourceType());
                 statement.setString(4, transaction.getPatronId());
@@ -39,7 +39,7 @@ public class TransactionService {
 
                 while (resultSet.next()) {
                     Transaction transaction = new Transaction();
-                    transaction.setTransactionId(resultSet.getString("transactionId"));
+                    transaction.setTransactionId(resultSet.getInt("transactionId"));
                     transaction.setResourceID(resultSet.getString("resourceId"));
                     transaction.setPatronId(resultSet.getString("patronId"));
                     transaction.setBorrowDate(resultSet.getString("borrowDate"));

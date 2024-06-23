@@ -10,7 +10,6 @@ import org.trainingamalitech.librarymanagementsystem.model.LibraryResource;
 import org.trainingamalitech.librarymanagementsystem.services.BookService;
 
 public class BookViewController {
-
     @FXML
     private TextField isbnField;
     @FXML

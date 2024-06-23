@@ -106,18 +106,18 @@ public abstract class LibraryResource {
         return isAvailable;
     }
 
-    public List<Transaction> transactions(LibraryResource libraryResource) {
+    public List<Transaction> transactions() {
         List<Transaction> transactions = new ArrayList<>();
         String sql = "SELECT * FROM Transaction WHERE resourceType = ? AND resourceId = ?";
 
         try (Connection connection = DatabaseUtil.getConnection();
              PreparedStatement prepareStatement = connection.prepareStatement(sql)) {
 
-            prepareStatement.setString(1, libraryResource.getResourceType().toString());
-            prepareStatement.setString(2, libraryResource.getId());
+            prepareStatement.setString(1, this.getResourceType().toString());
+            prepareStatement.setString(2, this.getId());
 
             try (ResultSet resultSet = prepareStatement.executeQuery()) {
-                System.out.println("Retrieving Transactions for " + libraryResource.getTitle());
+                System.out.println("Retrieving Transactions for " + this.getTitle());
 
                 while (resultSet.next()) {
                     int transactionId = resultSet.getInt("transactionId");
@@ -140,18 +140,18 @@ public abstract class LibraryResource {
         return transactions;
     }
 
-    public List<Reservation> reservations(LibraryResource libraryResource) {
+    public List<Reservation> reservations() {
         List<Reservation> reservations = new ArrayList<>();
         String sql = "SELECT * FROM Reservation WHERE resourceType = ? AND resourceId = ?";
 
         try (Connection connection = DatabaseUtil.getConnection();
              PreparedStatement prepareStatement = connection.prepareStatement(sql)) {
 
-            prepareStatement.setString(1, libraryResource.getResourceType().toString());
-            prepareStatement.setString(2, libraryResource.getId());
+            prepareStatement.setString(1, this.getResourceType().toString());
+            prepareStatement.setString(2, this.getId());
 
             try (ResultSet resultSet = prepareStatement.executeQuery()) {
-                System.out.println("Retrieving Transactions for " + libraryResource.getTitle());
+                System.out.println("Retrieving Transactions for " + this.getTitle());
 
                 while (resultSet.next()) {
                     int reservationId = resultSet.getInt("reservationId");

@@ -1,5 +1,6 @@
 package org.trainingamalitech.librarymanagementsystem.controller;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -43,13 +44,23 @@ public class ReservationViewController {
         String resourceId = resourceIdField.getText();
         String resourceType = resourceTypeField.getText();
         String patronId = patronIdField.getText();
-        Date reservationDate = Date.valueOf(reservationDateField.getText());
+        String reservationDate = reservationDateField.getText();
         Reservation reservation = new Reservation(resourceId,resourceType,patronId, reservationDate);
         reservationService.addReservation(reservation);
+        loadReservations();
+    }
+    public void handleUpdateReservation(ActionEvent actionEvent) {
+        String resourceId = resourceIdField.getText();
+        String resourceType = resourceTypeField.getText();
+        String patronId = patronIdField.getText();
+        String reservationDate = reservationDateField.getText();
+        Reservation reservation = new Reservation(resourceId,resourceType,patronId, reservationDate);
         loadReservations();
     }
 
     private void loadReservations() {
         reservationTable.getItems().setAll(reservationService.getAllReservations());
     }
+
+
 }
