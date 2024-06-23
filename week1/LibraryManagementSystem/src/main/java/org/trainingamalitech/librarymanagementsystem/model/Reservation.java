@@ -4,33 +4,32 @@ import java.util.Date;
 
 public class Reservation {
 
-    private String reservationId;
+    private int reservationId;
     private String resourceId;
     private String resourceType;
     private String patronId;
-    private Date reservationDate;
+    private String reservationDate;
 
-    public Reservation() {
-    }
-
-    public Reservation(String resourceId,String resourceType, String patronId, Date reservationDate) {
+    public Reservation(int reservationId, String resourceId, String resourceType, String patronId,
+            String reservationDate) {
+        this.reservationId = reservationId;
         this.resourceId = resourceId;
         this.resourceType = resourceType;
         this.patronId = patronId;
         this.reservationDate = reservationDate;
     }
 
-    public String getReservationId() {
-        return reservationId;
-    }
-
-    public void setReservationId(String reservationId) {
-        this.reservationId = reservationId;
+    public Reservation(String resourceId, String resourceType, String patronId, String reservationDate) {
+        this.resourceId = resourceId;
+        this.resourceType = resourceType;
+        this.patronId = patronId;
+        this.reservationDate = reservationDate;
     }
 
     public String getResourceId() {
         return resourceId;
     }
+
     public String getResourceType() {
         return resourceType;
     }
@@ -47,17 +46,17 @@ public class Reservation {
         this.patronId = patronId;
     }
 
-    public Date getReservationDate() {
+    public String getReservationDate() {
         return reservationDate;
     }
 
-    public void setReservationDate(Date reservationDate) {
+    public void setReservationDate(String reservationDate) {
         this.reservationDate = reservationDate;
     }
 
     @Override
     public String toString() {
-        return "Reservation [ReservationID=" + reservationId + ", resourceId=" + resourceId + ", PatronID=" + patronId + ", ReservationDate=" + reservationDate + "]";
+        return "Reservation [ReservationID=" + reservationId + ", resourceId=" + resourceId + ", PatronID=" + patronId
+                + ", ReservationDate=" + reservationDate + "]";
     }
 }
-

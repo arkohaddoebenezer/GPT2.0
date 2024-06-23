@@ -1,6 +1,8 @@
 package org.trainingamalitech.librarymanagementsystem.model;
 
 import org.trainingamalitech.librarymanagementsystem.enums.ResourceType;
+import org.trainingamalitech.librarymanagementsystem.model.Reservation;
+import org.trainingamalitech.librarymanagementsystem.model.Transaction;
 import org.trainingamalitech.librarymanagementsystem.util.DatabaseUtil;
 
 import java.sql.Connection;
@@ -137,6 +139,40 @@ public abstract class LibraryResource {
 
         return transactions;
     }
+
+    public List<Reservation> reservations(LibraryResource libraryResource) {
+        List<Reservation> reservations = new ArrayList<>();
+        String sql = "SELECT * FROM Reservation WHERE resourceType = ? AND resourceId = ?";
+
+        try (Connection connection = DatabaseUtil.getConnection();
+             PreparedStatement prepareStatement = connection.prepareStatement(sql)) {
+
+            prepareStatement.setString(1, libraryResource.getResourceType().toString());
+            prepareStatement.setString(2, libraryResource.getId());
+
+            try (ResultSet resultSet = prepareStatement.executeQuery()) {
+                System.out.println("Retrieving Transactions for " + libraryResource.getTitle());
+
+                while (resultSet.next()) {
+                    int reservationId = resultSet.getInt("reservationId");
+                    String resourceId = resultSet.getString("resourceId");
+                    String resourceType = resultSet.getString("resourceType");
+                    String patronId = resultSet.getString("patronId");
+                    String reservationDate = resultSet.getString("reservationDate");
+                    Reservation transaction = new Reservation(reservationId, resourceId,resourceType, patronId,
+                    reservationDate);
+                     
+                            reservations.add(transaction);
+                }
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving transactions", e);
+        }
+
+        return reservations;
+    }
+
 
     public abstract ResourceType getResourceType();
 }
