@@ -7,7 +7,10 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import org.trainingamalitech.librarymanagementsystem.model.Book;
 import org.trainingamalitech.librarymanagementsystem.model.LibraryResource;
+import org.trainingamalitech.librarymanagementsystem.model.Transaction;
 import org.trainingamalitech.librarymanagementsystem.services.BookService;
+
+import java.util.List;
 
 public class BookViewController {
     @FXML
@@ -103,6 +106,14 @@ public class BookViewController {
                         publisherField.setText(errorMessage);
                     else
                         yearField.setText(errorMessage);
+                }
+                List<Transaction> transactionHistory = book.transactionHistory();
+                for ( Transaction transaction: transactionHistory){
+                    System.out.println(transaction.toString());
+                }
+                List<Transaction> reservationHistory = book.transactionHistory();
+                for ( Transaction reservation: reservationHistory){
+                    System.out.println(reservation.toString());
                 }
             } else {
                 loadBooks();

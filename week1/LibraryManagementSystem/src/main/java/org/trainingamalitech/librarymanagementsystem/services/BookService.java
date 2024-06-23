@@ -15,7 +15,7 @@ public class BookService implements LibraryResourceOperations {
     @Override
     public LibraryResource saveResource(LibraryResource book) {
 
-        String sql = "INSERT INTO Book (isbn, title, author,publisher,year) VALUES (?, ?, ?, ?,?,?)";
+        String sql = "INSERT INTO Book (isbn, title, author,publisher,year) VALUES (?, ?, ?, ?,?)";
 
         try {
             Connection connection = DatabaseUtil.getConnection();
@@ -88,7 +88,7 @@ public class BookService implements LibraryResourceOperations {
 
     public List<Book> fetchAllBooks() {
         List<Book> books = new ArrayList<>();
-        String sql = "SELECT * FROM Book";
+        String sql = "SELECT * FROM Book ORDER BY created_at DESC";
         try (Connection connection = DatabaseUtil.getConnection();
              Statement statement = connection.createStatement();
              ResultSet resultSet = statement.executeQuery(sql)) {

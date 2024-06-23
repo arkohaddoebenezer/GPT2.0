@@ -106,7 +106,7 @@ public abstract class LibraryResource {
         return isAvailable;
     }
 
-    public List<Transaction> transactions() {
+    public List<Transaction> transactionHistory() {
         List<Transaction> transactions = new ArrayList<>();
         String sql = "SELECT * FROM Transaction WHERE resourceType = ? AND resourceId = ?";
 
@@ -140,7 +140,7 @@ public abstract class LibraryResource {
         return transactions;
     }
 
-    public List<Reservation> reservations() {
+    public List<Reservation> reservationHistory() {
         List<Reservation> reservations = new ArrayList<>();
         String sql = "SELECT * FROM Reservation WHERE resourceType = ? AND resourceId = ?";
 
