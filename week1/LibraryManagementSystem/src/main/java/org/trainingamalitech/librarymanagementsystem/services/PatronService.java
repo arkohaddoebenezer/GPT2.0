@@ -12,15 +12,13 @@ public class PatronService {
 
     // Method to add a new patron
     public void addPatron(Patron patron) {
-        String sql = "INSERT INTO Patron (id, name, address, phoneNumber) VALUES (?, ?, ?, ?)";
+        String sql = "INSERT INTO Patron (name, address, phoneNumber) VALUES ( ?, ?, ?)";
 
         try (Connection connection = DatabaseUtil.getConnection();
              PreparedStatement statement = connection.prepareStatement(sql)) {
-
-            statement.setString(1, patron.getId());
-            statement.setString(2, patron.getName());
-            statement.setString(3, patron.getAddress());
-            statement.setString(4, patron.getPhoneNumber());
+            statement.setString(1, patron.getName());
+            statement.setString(2, patron.getAddress());
+            statement.setString(3, patron.getPhoneNumber());
 
             statement.executeUpdate();
         } catch (SQLException e) {

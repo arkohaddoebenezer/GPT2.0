@@ -12,14 +12,15 @@ import java.sql.Date;
 
 public class ReservationViewController {
 
-    @FXML private TextField reservationIdField;
-    @FXML private TextField bookIsbnField;
+    @FXML private TextField resourceTypeField;
+    @FXML private TextField resourceIdField;
     @FXML private TextField patronIdField;
     @FXML private TextField reservationDateField;
 
     @FXML private TableView<Reservation> reservationTable;
     @FXML private TableColumn<Reservation, String> reservationIdColumn;
-    @FXML private TableColumn<Reservation, String> bookIsbnColumn;
+    @FXML private TableColumn<Reservation, String> resourceIdColumn;
+    @FXML private TableColumn<Reservation, String> resourceTypeColumn;
     @FXML private TableColumn<Reservation, String> patronIdColumn;
     @FXML private TableColumn<Reservation, Date> reservationDateColumn;
 
@@ -28,9 +29,9 @@ public class ReservationViewController {
     @FXML
     public void initialize() {
         reservationService = new ReservationService();
-
         reservationIdColumn.setCellValueFactory(new PropertyValueFactory<>("reservationId"));
-        bookIsbnColumn.setCellValueFactory(new PropertyValueFactory<>("bookIsbn"));
+        resourceIdColumn.setCellValueFactory(new PropertyValueFactory<>("resourceId"));
+        resourceTypeColumn.setCellValueFactory(new PropertyValueFactory<>("resourceType"));
         patronIdColumn.setCellValueFactory(new PropertyValueFactory<>("patronId"));
         reservationDateColumn.setCellValueFactory(new PropertyValueFactory<>("reservationDate"));
 
@@ -39,14 +40,12 @@ public class ReservationViewController {
 
     @FXML
     private void handleAddReservation() {
-        String reservationId = reservationIdField.getText();
-        String bookIsbn = bookIsbnField.getText();
+        String resourceId = resourceIdField.getText();
+        String resourceType = resourceTypeField.getText();
         String patronId = patronIdField.getText();
         Date reservationDate = Date.valueOf(reservationDateField.getText());
-
-        Reservation reservation = new Reservation(reservationId, bookIsbn, patronId, reservationDate);
+        Reservation reservation = new Reservation(resourceId,resourceType,patronId, reservationDate);
         reservationService.addReservation(reservation);
-
         loadReservations();
     }
 

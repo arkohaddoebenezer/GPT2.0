@@ -40,7 +40,7 @@ public class TransactionService {
                 while (resultSet.next()) {
                     Transaction transaction = new Transaction();
                     transaction.setTransactionId(resultSet.getString("transactionId"));
-                    transaction.setResourceID(resultSet.getString("bookIsbn"));
+                    transaction.setResourceID(resultSet.getString("resourceId"));
                     transaction.setPatronId(resultSet.getString("patronId"));
                     transaction.setBorrowDate(resultSet.getString("borrowDate"));
                     transaction.setReturnDate(resultSet.getString("returnDate"));
@@ -76,9 +76,7 @@ public class TransactionService {
 
             try (Connection connection = DatabaseUtil.getConnection();
                  PreparedStatement statement = connection.prepareStatement(sql)) {
-
                 statement.setString(1, transactionId);
-
                 statement.executeUpdate();
             } catch (SQLException e) {
                 e.printStackTrace();

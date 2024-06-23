@@ -1,9 +1,16 @@
 package org.trainingamalitech.librarymanagementsystem.model;
 
 import org.trainingamalitech.librarymanagementsystem.enums.ResourceType;
+import org.trainingamalitech.librarymanagementsystem.util.DatabaseUtil;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.LinkedList;
+import java.util.List;
 
 public abstract class LibraryResource {
     private final String id;
@@ -15,8 +22,8 @@ public abstract class LibraryResource {
     boolean isAvailable;
     public LinkedList<String> operationErrors = new LinkedList<>();
 
-    protected  LibraryResource(String id, String title, String author, String publisher, int year){
-        this.id =id;
+    protected LibraryResource(String id, String title, String author, String publisher, int year) {
+        this.id = id;
         this.title = title;
         this.author = author;
         this.publisher = publisher;
@@ -25,14 +32,16 @@ public abstract class LibraryResource {
         this.dateAdded = new Date().toString();
 
     }
-    protected LibraryResource(String id, String title, String author, String publisher, int year, String dateAdded, boolean availability) {
+
+    protected LibraryResource(String id, String title, String author, String publisher, int year, String dateAdded,
+            boolean availability) {
         this.id = id;
         this.title = title;
         this.author = author;
         this.publisher = publisher;
         this.year = year;
         this.dateAdded = dateAdded;
-        this.isAvailable=availability;
+        this.isAvailable = availability;
     }
 
     public String getTitle() {
@@ -66,21 +75,24 @@ public abstract class LibraryResource {
     public String getDateAdded() {
         return dateAdded;
     }
-    public String getPublisher(){
+
+    public String getPublisher() {
         if (title == null) {
             this.pushErrors("Publisher not set.");
             return null;
         }
-        return  publisher;
+        return publisher;
     }
-    public  int getYear(){
+
+    public int getYear() {
         return year;
     }
 
-    public void pushErrors(String errorMessage){
+    public void pushErrors(String errorMessage) {
         operationErrors.add(errorMessage);
     }
-    public boolean hasOperationErrors(){
+
+    public boolean hasOperationErrors() {
         return !operationErrors.isEmpty();
     }
 
@@ -90,6 +102,40 @@ public abstract class LibraryResource {
 
     public boolean checkAvailability() {
         return isAvailable;
+    }
+
+    public List<Transaction> transactions(LibraryResource libraryResource) {
+        List<Transaction> transactions = new ArrayList<>();
+        String sql = "SELECT * FROM Transaction WHERE resourceType = ? AND resourceId = ?";
+
+        try (Connection connection = DatabaseUtil.getConnection();
+             PreparedStatement prepareStatement = connection.prepareStatement(sql)) {
+
+            prepareStatement.setString(1, libraryResource.getResourceType().toString());
+            prepareStatement.setString(2, libraryResource.getId());
+
+            try (ResultSet resultSet = prepareStatement.executeQuery()) {
+                System.out.println("Retrieving Transactions for " + libraryResource.getTitle());
+
+                while (resultSet.next()) {
+                    int transactionId = resultSet.getInt("transactionId");
+                    String resourceId = resultSet.getString("resourceId");
+                    String resourceType = resultSet.getString("resourceType");
+                    String patronId = resultSet.getString("patronId");
+                    String borrowDate = resultSet.getString("borrowDate");
+                    String returnDate = resultSet.getString("returnDate");
+
+                    Transaction transaction = new Transaction(transactionId, resourceId, resourceType, patronId,
+                            borrowDate, returnDate);
+                    transactions.add(transaction);
+                }
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving transactions", e);
+        }
+
+        return transactions;
     }
 
     public abstract ResourceType getResourceType();

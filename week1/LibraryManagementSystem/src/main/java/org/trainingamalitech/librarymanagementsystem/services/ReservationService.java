@@ -11,15 +11,13 @@ public class ReservationService {
 
     // Method to add a new reservation
     public void addReservation(Reservation reservation) {
-        String sql = "INSERT INTO Reservation (reservationId, bookIsbn, patronId, reservationDate) VALUES (?, ?, ?, ?)";
+        String sql = "INSERT INTO Reservation (resourceId,resourceType, patronId, reservationDate) VALUES (?, ?, ?, ?)";
 
         try (Connection connection = DatabaseUtil.getConnection();
              PreparedStatement statement = connection.prepareStatement(sql)) {
-
-            statement.setString(1, reservation.getReservationId());
-            statement.setString(2, reservation.getBookIsbn());
-            statement.setString(3, reservation.getPatronId());
-            statement.setDate(4, new java.sql.Date(reservation.getReservationDate().getTime()));
+            statement.setString(1, reservation.getResourceType());
+            statement.setString(2, reservation.getPatronId());
+            statement.setDate(3, new java.sql.Date(reservation.getReservationDate().getTime()));
 
             statement.executeUpdate();
         } catch (SQLException e) {
@@ -39,7 +37,7 @@ public class ReservationService {
             while (resultSet.next()) {
                 Reservation reservation = new Reservation();
                 reservation.setReservationId(resultSet.getString("reservationId"));
-                reservation.setBookIsbn(resultSet.getString("bookIsbn"));
+                reservation.setResourceId(resultSet.getString("resourceId"));
                 reservation.setPatronId(resultSet.getString("patronId"));
                 reservation.setReservationDate(resultSet.getDate("reservationDate"));
 

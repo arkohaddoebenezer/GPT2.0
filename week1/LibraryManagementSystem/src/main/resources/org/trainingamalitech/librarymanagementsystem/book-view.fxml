@@ -13,7 +13,8 @@
     <TextField fx:id="publisherField" promptText="Publisher"/>
     <TextField fx:id="yearField" promptText="Year"/>
     <Button text="Add Book" onAction="#handleAddBook"/>
-    <Button text="Delete Book" onAction="#handleRemoveBook"/>
+    <Button text="Update Book" onAction="#handleRemoveBook"/>
+    <Button text="Delete Book" onAction="#handleUpdateBook"/>
 
     <TableView fx:id="bookTable">
         <TableColumn text="ISBN" fx:id="isbnColumn"/>

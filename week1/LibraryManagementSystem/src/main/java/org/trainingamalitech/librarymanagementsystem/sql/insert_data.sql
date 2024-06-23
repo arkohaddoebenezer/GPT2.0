@@ -11,9 +11,9 @@ INSERT INTO Patron (id, name, address, phoneNumber) VALUES
 ('P002', 'Bob Smith', '456 Oak St', '555-5678'),
 ('P003', 'Carol White', '789 Pine St', '555-9012');
 
-INSERT INTO Transaction (transactionId, bookIsbn, patronId, borrowDate, returnDate) VALUES
+INSERT INTO Transaction (transactionId, resourceId, patronId, borrowDate, returnDate) VALUES
 ('T001', '978-0135166307', 'P001', '2023-01-10', '2023-01-20'),
 ('T002', '978-0596009205', 'P002', '2023-01-15', NULL);
 
-INSERT INTO Reservation (reservationId, bookIsbn, patronId, reservationDate) VALUES
+INSERT INTO Reservation (reservationId, resourceId, patronId, reservationDate) VALUES
 ('R001', '978-0321356680', 'P003', '2023-01-18');

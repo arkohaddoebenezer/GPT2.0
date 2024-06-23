@@ -1,18 +1,15 @@
 package org.trainingamalitech.librarymanagementsystem.model;
 
 public class Transaction {
-    private String transactionId;
+    private int transactionId;
     private String resourceID;
-    private String resourceType;
+    private final String resourceType;
     private String patronId;
     private String borrowDate;
     private String returnDate;
 
-    public Transaction() {
-    }
-
-    public Transaction( String resourceID,String resourceType, String patronId, String borrowDate, String returnDate) {
-
+    public Transaction(int transactionId, String resourceID, String resourceType, String patronId, String borrowDate, String returnDate) {
+        this.transactionId = transactionId;
         this.resourceID = resourceID;
         this.resourceType = resourceType;
         this.patronId = patronId;
@@ -20,19 +17,24 @@ public class Transaction {
         this.returnDate = returnDate;
     }
 
-    public String getTransactionId() {
-        return transactionId;
+    public Transaction(String resourceID, String resourceType, String patronId, String borrowDate, String returnDate) {
+        this.resourceID = resourceID;
+        this.resourceType = resourceType;
+        this.patronId = patronId;
+        this.borrowDate = borrowDate;
+        this.returnDate = returnDate;
     }
 
-    public void setTransactionId(String transactionId) {
-        this.transactionId = transactionId;
+    public int getTransactionId() {
+        return transactionId;
     }
 
     public String getResourceID() {
         return resourceID;
     }
-    public String getResourceType(){
-        return  resourceType;
+
+    public String getResourceType() {
+        return resourceType;
     }
 
     public void setResourceID(String resourceID) {
@@ -65,7 +67,7 @@ public class Transaction {
 
     @Override
     public String toString() {
-        return "Transaction [TransactionID=" + transactionId + ", BookISBN=" + resourceID + ", PatronID=" + patronId + ", BorrowDate=" + borrowDate + ", ReturnDate=" + returnDate + "]";
+        return "Transaction [TransactionID=" + transactionId + ", resourceId=" + resourceID + ", PatronID=" + patronId
+                + ", BorrowDate=" + borrowDate + ", ReturnDate=" + returnDate + "]";
     }
 }
-

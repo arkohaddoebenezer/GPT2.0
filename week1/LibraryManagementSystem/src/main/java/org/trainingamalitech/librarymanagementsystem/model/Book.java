@@ -1,10 +1,6 @@
 package org.trainingamalitech.librarymanagementsystem.model;
 
 import org.trainingamalitech.librarymanagementsystem.enums.ResourceType;
-import org.trainingamalitech.librarymanagementsystem.services.BookService;
-
-import java.util.Calendar;
-import java.util.Date;
 
 public class Book extends LibraryResource{
 
@@ -20,13 +16,10 @@ public class Book extends LibraryResource{
     public ResourceType getResourceType() {
         return ResourceType.BOOK;
     }
-    public String getIsbn() {
-        return this.getId();
-    }
-
 
     @Override
     public String toString() {
         return "Book [ISBN=" + this.getId() + ", Title=" + this.getTitle() + ", Author=" + this.getAuthor() + ", Publisher=" + this.getPublisher() + ", Year=" + this.getYear() + ", Available=" + this.getAvailability() + "]";
     }
-}
+
+    }

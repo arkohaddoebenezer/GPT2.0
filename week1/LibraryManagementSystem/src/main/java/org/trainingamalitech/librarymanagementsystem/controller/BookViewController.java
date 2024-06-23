@@ -84,6 +84,38 @@ public class BookViewController {
     }
 
     @FXML
+    private void handleUpdateBook() {
+        try {
+            String isbn = isbnField.getText();
+            String title = titleField.getText();
+            String author = authorField.getText();
+            String publisher = publisherField.getText();
+            int year = Integer.parseInt(yearField.getText());
+            LibraryResource book = bookService.updateResource(new Book(isbn, title, author, publisher, year));
+            if (book.hasOperationErrors()) {
+                for (String errorMessage : book.operationErrors) {
+                    if (errorMessage.contains("isbn")||errorMessage.contains("book.PRIMARY"))
+                        isbnField.setText("ISBN Already exist in library or cannot be blank");
+                    else if (errorMessage.contains("title"))
+                        titleField.setText(errorMessage);
+                    else if (errorMessage.contains("author"))
+                        authorField.setText(errorMessage);
+                    else if (errorMessage.contains("publisher"))
+                        publisherField.setText(errorMessage);
+                    else
+                        yearField.setText(errorMessage);
+                }
+            } else {
+                loadBooks();
+            }
+        } catch (Exception e) {
+            if (e.getClass() == NumberFormatException.class) {
+                yearField.setText("Wrong input for the year");
+            }
+        }
+    }
+
+    @FXML
     private void handleRemoveBook() {
         try {
             String isbn = isbnField.getText();

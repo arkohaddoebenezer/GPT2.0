@@ -4,9 +4,10 @@ CREATE DATABASE LibraryManagement;
 -- Use the database
 USE LibraryManagement;
 
+-- Create
 CREATE TABLE Resource (
-    id VARCHAR(13) PRIMARY KEY,
-    type VARCHAR(10) NOT NULL,
+    resourceType VARCHAR(13),
+    resourceId VARCHAR(13)
 );
 -- Create Book table
 CREATE TABLE Book (
@@ -15,7 +16,8 @@ CREATE TABLE Book (
     author VARCHAR(100),
     publisher VARCHAR(100),
     year INT(10),
-    date_added VARCHAR(100),
+    created_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
     isAvailable BOOLEAN DEFAULT TRUE
 );
 
@@ -24,7 +26,8 @@ CREATE TABLE DVD (
     title VARCHAR(100) NOT NULL,
     author VARCHAR(100),
     year INT(10),
-    date_added VARCHAR(100),
+    created_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
     isAvailable BOOLEAN DEFAULT TRUE
 );
 
@@ -34,37 +37,45 @@ CREATE TABLE Journal (
     author VARCHAR(100),
     publisher VARCHAR(100),
     year INT(10),
-    date_added VARCHAR(100),
+    created_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
     isAvailable BOOLEAN DEFAULT TRUE
 );
 
 -- Create Patron table
 CREATE TABLE Patron (
-    id VARCHAR(10) PRIMARY KEY,
+    id int AUTO_INCREMENT PRIMARY KEY ,
     name VARCHAR(100) NOT NULL,
     address VARCHAR(255),
-    phoneNumber VARCHAR(15)
+    phoneNumber VARCHAR(15),
+    created_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
 -- Create Transaction table
 CREATE TABLE Transaction (
-    transactionId VARCHAR(10) PRIMARY KEY,
-    resourceType VARCHAR(13)
+    transactionId int AUTO_INCREMENT PRIMARY KEY,
+    resourceType VARCHAR(13),
     resourceId VARCHAR(13),
     patronId VARCHAR(10),
     borrowDate VARCHAR(100) NOT NULL,
     returnDate VARCHAR(100),
-    FOREIGN KEY (resourceId) REFERENCES Resource(id),
+    created_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (resourceId) REFERENCES Resource(resourceId),
     FOREIGN KEY (patronId) REFERENCES Patron(id)
 );
 
 -- Create Reservation table
 CREATE TABLE Reservation (
-    reservationId VARCHAR(10) PRIMARY KEY,
+    reservationId int AUTO_INCREMENT PRIMARY KEY,
     resourceType VARCHAR(13),
     resourceId VARCHAR(13),
     patronId VARCHAR(10),
     reservationDate VARCHAR(100) NOT NULL,
-    FOREIGN KEY (resourceId) REFERENCES Resource(id),
+    created_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (resourceId) REFERENCES Resource(resourceId),
     FOREIGN KEY (patronId) REFERENCES Patron(id)
 );
+

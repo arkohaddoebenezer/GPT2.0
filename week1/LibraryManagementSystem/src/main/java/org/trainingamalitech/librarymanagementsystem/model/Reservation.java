@@ -5,16 +5,17 @@ import java.util.Date;
 public class Reservation {
 
     private String reservationId;
-    private String bookIsbn;
+    private String resourceId;
+    private String resourceType;
     private String patronId;
     private Date reservationDate;
 
     public Reservation() {
     }
 
-    public Reservation(String reservationId, String bookIsbn, String patronId, Date reservationDate) {
-        this.reservationId = reservationId;
-        this.bookIsbn = bookIsbn;
+    public Reservation(String resourceId,String resourceType, String patronId, Date reservationDate) {
+        this.resourceId = resourceId;
+        this.resourceType = resourceType;
         this.patronId = patronId;
         this.reservationDate = reservationDate;
     }
@@ -27,12 +28,15 @@ public class Reservation {
         this.reservationId = reservationId;
     }
 
-    public String getBookIsbn() {
-        return bookIsbn;
+    public String getResourceId() {
+        return resourceId;
+    }
+    public String getResourceType() {
+        return resourceType;
     }
 
-    public void setBookIsbn(String bookIsbn) {
-        this.bookIsbn = bookIsbn;
+    public void setResourceId(String resourceId) {
+        this.resourceId = resourceId;
     }
 
     public String getPatronId() {
@@ -53,7 +57,7 @@ public class Reservation {
 
     @Override
     public String toString() {
-        return "Reservation [ReservationID=" + reservationId + ", BookISBN=" + bookIsbn + ", PatronID=" + patronId + ", ReservationDate=" + reservationDate + "]";
+        return "Reservation [ReservationID=" + reservationId + ", resourceId=" + resourceId + ", PatronID=" + patronId + ", ReservationDate=" + reservationDate + "]";
     }
 }
 
