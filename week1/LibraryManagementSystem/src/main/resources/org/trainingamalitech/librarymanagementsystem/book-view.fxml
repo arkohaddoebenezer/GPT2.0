@@ -6,15 +6,15 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" spacing="10" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.trainingamalitech.librarymanagementsystem.controller.BookViewController">
+<VBox alignment="CENTER" spacing="10" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.trainingamalitech.librarymanagementsystem.controllers.BookViewController">
     <TextField fx:id="isbnField" promptText="ISBN"/>
     <TextField fx:id="titleField" promptText="Title"/>
     <TextField fx:id="authorField" promptText="Author"/>
     <TextField fx:id="publisherField" promptText="Publisher"/>
     <TextField fx:id="yearField" promptText="Year"/>
     <Button text="Add Book" onAction="#handleAddBook"/>
-    <Button text="Update Book" onAction="#handleRemoveBook"/>
-    <Button text="Delete Book" onAction="#handleUpdateBook"/>
+    <Button text="Update Book" onAction="#handleUpdateBook"/>
+    <Button text="Delete Book" onAction="#handleRemoveBook"/>
 
     <TableView fx:id="bookTable">
         <TableColumn text="ISBN" fx:id="isbnColumn"/>

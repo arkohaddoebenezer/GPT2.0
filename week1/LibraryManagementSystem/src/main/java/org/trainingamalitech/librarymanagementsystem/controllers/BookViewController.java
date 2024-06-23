@@ -1,4 +1,4 @@
-package org.trainingamalitech.librarymanagementsystem.controller;
+package org.trainingamalitech.librarymanagementsystem.controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
@@ -44,7 +44,7 @@ public class BookViewController {
         isbnColumn.setCellValueFactory(new PropertyValueFactory<>("isbn"));
         titleColumn.setCellValueFactory(new PropertyValueFactory<>("title"));
         authorColumn.setCellValueFactory(new PropertyValueFactory<>("author"));
-        dateAddedColumn.setCellValueFactory(new PropertyValueFactory<>("date_added"));
+        dateAddedColumn.setCellValueFactory(new PropertyValueFactory<>("created_at"));
         isAvailableColumn.setCellValueFactory(new PropertyValueFactory<>("isAvailable"));
 
         loadBooks();
@@ -62,8 +62,8 @@ public class BookViewController {
             if (book.hasOperationErrors()) {
                 for (String errorMessage : book.operationErrors) {
                     if (errorMessage.contains("isbn")||errorMessage.contains("book.PRIMARY"))
-                        isbnField.setText("ISBN Already exist in library or cannot be blank");
-                    else if (errorMessage.contains("title"))
+                        isbnField.setText("ISBN Already exist or cannot be blank");
+                    else if (errorMessage.contains("Title"))
                         titleField.setText(errorMessage);
                     else if (errorMessage.contains("author"))
                         authorField.setText(errorMessage);

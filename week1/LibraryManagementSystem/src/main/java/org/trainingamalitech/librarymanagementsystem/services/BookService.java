@@ -15,7 +15,7 @@ public class BookService implements LibraryResourceOperations {
     @Override
     public LibraryResource saveResource(LibraryResource book) {
 
-        String sql = "INSERT INTO Book (isbn, title, author,date_added,isAvailable) VALUES (?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO Book (isbn, title, author,publisher,year) VALUES (?, ?, ?, ?,?,?)";
 
         try {
             Connection connection = DatabaseUtil.getConnection();
@@ -28,8 +28,8 @@ public class BookService implements LibraryResourceOperations {
             statement.setString(1, book.getId());
             statement.setString(2, book.getTitle());
             statement.setString(3, book.getAuthor());
-            statement.setString(4, book.getDateAdded());
-            statement.setBoolean(5, book.getAvailability());
+            statement.setString(4, book.getPublisher());
+            statement.setInt(5,book.getYear());
             statement.executeUpdate();
         } catch (SQLException e) {
             book.pushErrors(e.getMessage());
@@ -97,7 +97,7 @@ public class BookService implements LibraryResourceOperations {
                 String isbn = resultSet.getString("isbn");
                 String title = resultSet.getString("title");
                 String author = resultSet.getString("author");
-                String dateAdded = resultSet.getString("date_added");
+                String dateAdded = resultSet.getString("created_at");
                 String publisher = resultSet.getString("publisher");
                 int year = resultSet.getInt("year");
                 boolean availability = resultSet.getBoolean("isAvailable");

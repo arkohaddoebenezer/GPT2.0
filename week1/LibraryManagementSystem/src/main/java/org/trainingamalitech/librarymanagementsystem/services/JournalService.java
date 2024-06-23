@@ -14,7 +14,7 @@ public class JournalService implements LibraryResourceOperations {
     @Override
     public LibraryResource saveResource(LibraryResource journal) {
 
-        String sql = "INSERT INTO Book (isbn, title, author,date_added,isAvailable) VALUES (?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO Book (isbn, title, author,created_at,isAvailable) VALUES (?, ?, ?, ?, ?)";
 
         try (Connection connection = DatabaseUtil.getConnection();
              PreparedStatement statement = connection.prepareStatement(sql)) {
@@ -82,7 +82,7 @@ public class JournalService implements LibraryResourceOperations {
                 String author = resultSet.getString("author");
                 String publisher = resultSet.getString("");
                 int year = resultSet.getInt("year");
-                String dateAdded = resultSet.getString("date_added");
+                String dateAdded = resultSet.getString("created_at");
                 boolean availability = resultSet.getBoolean("isAvailable");
                 Book journal = new Book(isbn,title,author,publisher,year,dateAdded,availability);
                 System.out.println("Title: "+resultSet.getString("title"));

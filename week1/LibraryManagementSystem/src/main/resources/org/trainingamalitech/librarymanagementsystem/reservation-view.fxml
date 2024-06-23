@@ -6,7 +6,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" spacing="10" xmlns:fx="http://javafx.com/fxml" fx:controller="org.trainingamalitech.librarymanagementsystem.controller.ReservationViewController">
+<VBox alignment="CENTER" spacing="10" xmlns:fx="http://javafx.com/fxml" fx:controller="org.trainingamalitech.librarymanagementsystem.controllers.ReservationViewController">
     <TextField fx:id="resourceIdField" promptText="Resource ID"/>
     <TextField fx:id="resourceTypeField" promptText="Resource Type"/>
     <TextField fx:id="patronIdField" promptText="Patron ID"/>

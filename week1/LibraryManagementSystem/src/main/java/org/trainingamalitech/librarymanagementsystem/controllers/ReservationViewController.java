@@ -1,4 +1,4 @@
-package org.trainingamalitech.librarymanagementsystem.controller;
+package org.trainingamalitech.librarymanagementsystem.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

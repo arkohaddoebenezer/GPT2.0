@@ -14,7 +14,7 @@ public class DVDService implements LibraryResourceOperations {
     @Override
     public LibraryResource saveResource(LibraryResource DVD) {
         
-        String sql = "INSERT INTO DVD (isbn, title, author,date_added,isAvailable) VALUES (?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO DVD (isbn, title, author,created_at,isAvailable) VALUES (?, ?, ?, ?, ?)";
 
         try (Connection connection = DatabaseUtil.getConnection();
              PreparedStatement statement = connection.prepareStatement(sql)) {
@@ -82,7 +82,7 @@ public class DVDService implements LibraryResourceOperations {
                 String author = resultSet.getString("author");
                 String producer = resultSet.getString("producer");
                 int year = resultSet.getInt("year");
-                String dateAdded = resultSet.getString("date_added");
+                String dateAdded = resultSet.getString("created_at");
                 boolean availability = resultSet.getBoolean("isAvailable");
                 
                 DVD DVD = new DVD(issn,title,author,producer,year,dateAdded,availability);
