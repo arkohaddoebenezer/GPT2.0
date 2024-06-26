@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="org.trainingamalitech.textprocessingtool.controllers.MainController">
+    <top>
+        <MenuBar>
+            <Menu text="File">
+                <MenuItem text="Open" onAction="#handleOpen"/>
+                <MenuItem text="Save" onAction="#handleSave"/>
+                <MenuItem text="Save As" onAction="#handleSaveAs"/>
+                <MenuItem text="Exit" onAction="#handleExit"/>
+            </Menu>
+            <Menu text="Edit">
+                <MenuItem text="Undo" onAction="#handleUndo"/>
+                <MenuItem text="Redo" onAction="#handleRedo"/>
+                <MenuItem text="Cut" onAction="#handleCut"/>
+                <MenuItem text="Copy" onAction="#handleCopy"/>
+                <MenuItem text="Paste" onAction="#handlePaste"/>
+            </Menu>
+            <Menu text="Regex">
+                <MenuItem text="Insert Pattern" onAction="#handleInsertPattern"/>
+                <MenuItem text="Test Pattern" onAction="#handleTestPattern"/>
+                <MenuItem text="Find" onAction="#handleFind"/>
+                <MenuItem text="Replace" onAction="#handleReplace"/>
+            </Menu>
+            <Menu text="Help">
+                <MenuItem text="About" onAction="#handleAbout"/>
+                <MenuItem text="Help" onAction="#handleHelp"/>
+            </Menu>
+        </MenuBar>
+    </top>
+    <center>
+        <VBox spacing="10">
+            <padding>
+
+            </padding>
+            <TextArea fx:id="textArea" prefHeight="400" prefWidth="600"/>
+            <TextField fx:id="regexField" promptText="Enter Regex Pattern"/>
+            <TextField fx:id="replaceField" promptText="Enter Replacement Text"/>
+            <HBox spacing="10">
+                <Button text="Test Pattern" onAction="#handleTestPattern"/>
+                <Button text="Find" onAction="#handleFind"/>
+                <Button text="Replace" onAction="#handleReplace"/>
+            </HBox>
+            <TextArea fx:id="resultArea" prefHeight="200" prefWidth="600" editable="false"/>
+        </VBox>
+    </center>
+    <bottom>
+        <Label fx:id="statusLabel" text="Status: Ready" />
+    </bottom>
+</BorderPane>

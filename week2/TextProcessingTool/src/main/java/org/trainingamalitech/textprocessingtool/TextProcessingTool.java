@@ -4,20 +4,21 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.trainingamalitech.textprocessingtool.controllers.MainController;
 
 import java.io.IOException;
 
 public class TextProcessingTool extends Application {
     @Override
-    public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(TextProcessingTool.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Text Processor");
-        stage.setScene(scene);
-        stage.show();
+    public void start(Stage primaryStage) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(TextProcessingTool.class.getResource("MainLayout.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        primaryStage.setTitle("Text Processing Tool");
+        primaryStage.setScene(scene);
+        primaryStage.show();
     }
 
     public static void main(String[] args) {
-        launch();
+        launch(args);
     }
 }
