@@ -11,7 +11,6 @@ import java.sql.Date;
 
 public class TransactionViewController {
 
-    @FXML private TextField transactionIdField;
     @FXML private TextField resourceIdField;
     @FXML private TextField resourceTypeField;
     @FXML private TextField patronIdField;
@@ -51,6 +50,9 @@ public class TransactionViewController {
         Transaction transaction = new Transaction(resourceId,resourceType, patronId, borrowDate, returnDate);
         transactionService.addTransaction(transaction);
         loadTransactions();
+    }
+    @FXML private void handleReturnBook(){
+
     }
 
     private void loadTransactions() {
