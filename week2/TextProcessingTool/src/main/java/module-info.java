@@ -8,6 +8,4 @@ module org.trainingamalitech.textprocessingtool {
     exports org.trainingamalitech.textprocessingtool;
     exports org.trainingamalitech.textprocessingtool.controllers;
     opens org.trainingamalitech.textprocessingtool.controllers to javafx.fxml;
-    exports org.trainingamalitech.textprocessingtool.database;
-    opens org.trainingamalitech.textprocessingtool.database to javafx.fxml;
 }

@@ -1,50 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.TextFlow?>
 
-<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="org.trainingamalitech.textprocessingtool.controllers.MainController">
+<BorderPane xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.trainingamalitech.textprocessingtool.controllers.MainController">
     <top>
         <MenuBar>
             <Menu text="File">
-                <MenuItem text="Open" onAction="#handleOpen"/>
-                <MenuItem text="Save" onAction="#handleSave"/>
-                <MenuItem text="Save As" onAction="#handleSaveAs"/>
-                <MenuItem text="Exit" onAction="#handleExit"/>
+                <MenuItem onAction="#handleOpen" text="Open" />
+                <MenuItem onAction="#handleSave" text="Save" />
+                <MenuItem onAction="#handleSaveAs" text="Save As" />
+                <MenuItem onAction="#handleExit" text="Exit" />
             </Menu>
             <Menu text="Edit">
-                <MenuItem text="Undo" onAction="#handleUndo"/>
-                <MenuItem text="Redo" onAction="#handleRedo"/>
-                <MenuItem text="Cut" onAction="#handleCut"/>
-                <MenuItem text="Copy" onAction="#handleCopy"/>
-                <MenuItem text="Paste" onAction="#handlePaste"/>
-            </Menu>
-            <Menu text="Regex">
-                <MenuItem text="Insert Pattern" onAction="#handleInsertPattern"/>
-                <MenuItem text="Test Pattern" onAction="#handleTestPattern"/>
-                <MenuItem text="Find" onAction="#handleFind"/>
-                <MenuItem text="Replace" onAction="#handleReplace"/>
+                <MenuItem onAction="#handleUndo" text="Undo" />
+                <MenuItem onAction="#handleRedo" text="Redo" />
+                <MenuItem onAction="#handleCut" text="Cut" />
+                <MenuItem onAction="#handleCopy" text="Copy" />
+                <MenuItem onAction="#handlePaste" text="Paste" />
             </Menu>
             <Menu text="Help">
-                <MenuItem text="About" onAction="#handleAbout"/>
-                <MenuItem text="Help" onAction="#handleHelp"/>
+                <MenuItem onAction="#handleAbout" text="About" />
+                <MenuItem onAction="#handleHelp" text="Help" />
             </Menu>
         </MenuBar>
     </top>
     <center>
         <VBox spacing="10">
             <padding>
-
             </padding>
-            <TextArea fx:id="textArea" prefHeight="400" prefWidth="600"/>
-            <TextField fx:id="regexField" promptText="Enter Regex Pattern"/>
-            <TextField fx:id="replaceField" promptText="Enter Replacement Text"/>
+            <TextArea fx:id="textArea" prefHeight="252.0" prefWidth="600" />
+            <TextField fx:id="regexField" promptText="Enter Regex Pattern" />
+            <TextField fx:id="replaceField" promptText="Enter Replacement Text" />
             <HBox spacing="10">
-                <Button text="Test Pattern" onAction="#handleTestPattern"/>
-                <Button text="Find" onAction="#handleFind"/>
-                <Button text="Replace" onAction="#handleReplace"/>
+                <Button onAction="#handleTestPattern" text="Test Pattern" />
+                <Button onAction="#handleSearch" text="Search" />
+                <Button onAction="#handleReplace" text="Replace" />
+                <CheckBox fx:id="matchCase" alignment="CENTER" contentDisplay="CENTER" selected="true" text="Match Case" textAlignment="CENTER" />
             </HBox>
-            <TextArea fx:id="resultArea" prefHeight="200" prefWidth="600" editable="false"/>
+            <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="252.0" prefWidth="600">
+                <TextFlow fx:id="resultFlow" />
+            </ScrollPane>
         </VBox>
     </center>
     <bottom>
