@@ -10,8 +10,13 @@ import javafx.stage.FileChooser;
 import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.regex.PatternSyntaxException;
+
+import org.trainingamalitech.textprocessingtool.controllers.modules.RegexPattern;
 
 public class MainController {
 
@@ -22,13 +27,19 @@ public class MainController {
     @FXML
     private TextField replaceField;
     @FXML
-    private TextFlow resultFlow;
+    private TextFlow  resultFlow;
     @FXML
     private Label statusLabel;
     @FXML
     private CheckBox matchCase;
 
     private File currentFile;
+
+    private List<RegexPattern> regexPatterns;
+
+    public MainController() {
+        regexPatterns = new ArrayList<>();
+    }
 
     // File Menu Handlers
     @FXML
@@ -110,12 +121,6 @@ public class MainController {
         textArea.paste();
     }
 
-    // Regex Menu Handlers
-    @FXML
-    private void handleInsertPattern() {
-        textArea.insertText(textArea.getCaretPosition(), regexField.getText());
-    }
-
     @FXML
     private void handleTestPattern() {
         String pattern = regexField.getText();
@@ -126,74 +131,141 @@ public class MainController {
         Matcher m = p.matcher(text);
 
         resultFlow.getChildren().clear();
-
+        int occurrence = 0;
         while (m.find()) {
             resultFlow.getChildren().add(new Text("Match: " + m.group() + " at position: " + m.start() + "\n"));
-        }
+            occurrence++;
 
-        statusLabel.setText("Pattern tested.");
+        }
+        RegexPattern regexPattern = new RegexPattern(pattern);
+        regexPatterns.add(regexPattern);
+        statusLabel.setText("Found "+occurrence+" match(es).");
     }
 
     @FXML
-    private void handleSearch() {
+    private void handleSavePattern() {
         String pattern = regexField.getText();
-        String text = textArea.getText();
-        if(!matchCase.isSelected()){
-            pattern = pattern.toLowerCase();
-            text = text.toLowerCase();
+        RegexPattern regexPattern = new RegexPattern(pattern);
+        if (!regexPatterns.contains(regexPattern)) {
+            regexPatterns.add(regexPattern);
+            statusLabel.setText("Saved Pattern.");
+        } else {
+            statusLabel.setText("Pattern already exists.");
         }
+    }
+    @FXML
+    private void handleReadPatterns() {
+        resultFlow.getChildren().clear();
+        for (RegexPattern regexPattern : regexPatterns) {
+            Text resultText = new Text(regexPattern + "\n");
+            resultFlow.getChildren().add(resultText);
+        }
+        statusLabel.setText("History.");
+    }
+
+    @FXML
+    private void handleDeletePattern() {
+        String pattern = regexField.getText();
+        regexPatterns.removeIf(regexPattern -> regexPattern.getPattern().equals(pattern));
+        statusLabel.setText("Deleted History");
+    }
+
+
+    @FXML
+    private void handleSearch() {
+    String pattern = regexField.getText();
+    String text = textArea.getText();
+
+    if (!matchCase.isSelected()) {
+        pattern = pattern.toLowerCase();
+        text = text.toLowerCase();
+    }
+
+    try {
         Pattern p = Pattern.compile(pattern);
         Matcher m = p.matcher(text);
 
         resultFlow.getChildren().clear();
-        
+
         int lastEnd = 0;
+        int occurrence = 0;
+
         while (m.find()) {
-            
             if (m.start() > lastEnd) {
                 Text nonMatchText = new Text(text.substring(lastEnd, m.start()));
                 resultFlow.getChildren().add(nonMatchText);
             }
-            
-            Text matchText = new Text(m.group());
 
+            Text matchText = new Text(m.group());
             matchText.setFill(Color.RED);
             resultFlow.getChildren().add(matchText);
             lastEnd = m.end();
+            occurrence += 1;
         }
-        
-        // Add remaining text after the last match
+
         if (lastEnd < text.length()) {
             Text remainingText = new Text(text.substring(lastEnd));
             resultFlow.getChildren().add(remainingText);
         }
 
-        statusLabel.setText("Find operation completed.");
-    }
+        statusLabel.setText("Found " + occurrence + " match(es).");
 
- 
+    } catch (PatternSyntaxException e) {
+        statusLabel.setText("Invalid regex pattern: " + e.getDescription());
+    }
+}
+
+
  
     @FXML
     private void handleReplace() {
         String pattern = regexField.getText();
         String replacement = replaceField.getText();
         String text = textArea.getText();
-
+    
+        if(!matchCase.isSelected()){
+            pattern = pattern.toLowerCase();
+            text = text.toLowerCase();
+        }
+    
         Pattern p = Pattern.compile(pattern);
         Matcher m = p.matcher(text);
-
-        String result = m.replaceAll(replacement);
-        textArea.setText(result);
-
-        statusLabel.setText("Replace operation completed.");
-    }
+    
+        resultFlow.getChildren().clear();
+    
+        int lastEnd = 0;
+        int occurrence = 0;
+        StringBuilder result = new StringBuilder();
+    
+        while (m.find()) {
+            if (m.start() > lastEnd) {
+                Text nonMatchText = new Text(text.substring(lastEnd, m.start()));
+                resultFlow.getChildren().add(nonMatchText);
+                result.append(nonMatchText.getText());
+            }
+    
+            Text matchText = new Text(replacement);
+            matchText.setFill(Color.GREEN);
+            resultFlow.getChildren().add(matchText);
+            result.append(matchText.getText());
+            lastEnd = m.end();
+            occurrence += 1;
+        }
+    
+        if (lastEnd < text.length()) {
+            Text remainingText = new Text(text.substring(lastEnd));
+            resultFlow.getChildren().add(remainingText);
+            result.append(remainingText.getText());
+        }
+        statusLabel.setText("Replaced " + occurrence + " match(es).");
+    }    
 
     @FXML
     private void handleAbout() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("About");
         alert.setHeaderText(null);
-        alert.setContentText("Text Processing Tool\nVersion 1.0");
+        alert.setContentText("Text Processor By Ebenezer Arkoh-Addo");
         alert.showAndWait();
     }
 
@@ -202,7 +274,7 @@ public class MainController {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Help");
         alert.setHeaderText(null);
-        alert.setContentText("Help content goes here.");
+        alert.setContentText("This is a simple text processing tool that allows you to search, replace and test regular expressions.");
         alert.showAndWait();
     }
 }

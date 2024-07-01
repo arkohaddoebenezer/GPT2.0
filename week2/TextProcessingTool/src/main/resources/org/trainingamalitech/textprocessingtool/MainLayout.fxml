@@ -1,60 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.TextFlow?>
 
-<BorderPane xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.trainingamalitech.textprocessingtool.controllers.MainController">
-    <top>
-        <MenuBar>
-            <Menu text="File">
-                <MenuItem onAction="#handleOpen" text="Open" />
-                <MenuItem onAction="#handleSave" text="Save" />
-                <MenuItem onAction="#handleSaveAs" text="Save As" />
-                <MenuItem onAction="#handleExit" text="Exit" />
-            </Menu>
-            <Menu text="Edit">
-                <MenuItem onAction="#handleUndo" text="Undo" />
-                <MenuItem onAction="#handleRedo" text="Redo" />
-                <MenuItem onAction="#handleCut" text="Cut" />
-                <MenuItem onAction="#handleCopy" text="Copy" />
-                <MenuItem onAction="#handlePaste" text="Paste" />
-            </Menu>
-            <Menu text="Help">
-                <MenuItem onAction="#handleAbout" text="About" />
-                <MenuItem onAction="#handleHelp" text="Help" />
-            </Menu>
-        </MenuBar>
-    </top>
-    <center>
-        <VBox spacing="10">
+<VBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="org.trainingamalitech.textprocessingtool.controllers.MainController">
+    <children>
+        <TextArea fx:id="textArea" prefHeight="200" prefWidth="400" />
+        <ScrollPane fitToWidth="true" prefHeight="200" prefWidth="400">
+            <content>
+                <TextFlow fx:id="resultFlow" prefWidth="400" />
+            </content>
+        </ScrollPane>
+        <HBox spacing="10">
+            <Label text="Find:" />
+            <TextField fx:id="regexField" promptText="Word or Regular expression"  />
+            <Label text="Replace with:" />
+            <TextField fx:id="replaceField" />
+            <CheckBox fx:id="matchCase" text="Match Case" />
             <padding>
+                <Insets top="15.0" />
             </padding>
-            <TextArea fx:id="textArea" prefHeight="252.0" prefWidth="600" />
-            <TextField fx:id="regexField" promptText="Enter Regex Pattern" />
-            <TextField fx:id="replaceField" promptText="Enter Replacement Text" />
-            <HBox spacing="10">
-                <Button onAction="#handleTestPattern" text="Test Pattern" />
-                <Button onAction="#handleSearch" text="Search" />
-                <Button onAction="#handleReplace" text="Replace" />
-                <CheckBox fx:id="matchCase" alignment="CENTER" contentDisplay="CENTER" selected="true" text="Match Case" textAlignment="CENTER" />
-            </HBox>
-            <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="252.0" prefWidth="600">
-                <TextFlow fx:id="resultFlow" />
-            </ScrollPane>
-        </VBox>
-    </center>
-    <bottom>
-        <Label fx:id="statusLabel" text="Status: Ready" />
-    </bottom>
-</BorderPane>
+        </HBox>
+        <HBox spacing="10">
+            <Button onAction="#handleSearch" text="Search" />
+            <Button onAction="#handleReplace" text="Replace" />
+            <Button onAction="#handleTestPattern" text="Test Pattern" />
+            <Button onAction="#handleSavePattern" text="Save Pattern" />
+            <Button onAction="#handleReadPatterns" text="Show Saved Pattern" />
+         <padding>
+            <Insets top="15.0" />
+         </padding>
+        </HBox>
+        <Label fx:id="statusLabel" />
+    </children>
+</VBox>
