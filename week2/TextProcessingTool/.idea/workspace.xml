@@ -10,8 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="24d012a0-9f8a-49e5-87c8-22335e1a96be" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/trainingamalitech/textprocessingtool/jar files/TextProcessingTool.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/trainingamalitech/textprocessingtool/MainLayout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/trainingamalitech/textprocessingtool/MainLayout.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/trainingamalitech/textprocessingtool/dist/TextProcessingTool.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/trainingamalitech/textprocessingtool/dist/run.bat" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,14 +53,15 @@
     "git-widget-placeholder": "regex-module",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "G:/GPT 2.0/week2/TextProcessingTool/src/main/java/org/trainingamalitech/textprocessingtool/dist",
+    "last_opened_file_path": "G:/GPT 2.0/week2/TextProcessingTool/src/main/java/org/trainingamalitech/textprocessingtool/jar files",
     "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.42068964"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\GPT 2.0\week2\TextProcessingTool\src\main\java\org\trainingamalitech\textprocessingtool\jar files" />
       <recent name="G:\GPT 2.0\week2\TextProcessingTool\src\main\java\org\trainingamalitech\textprocessingtool\dist" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
