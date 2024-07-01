@@ -20,6 +20,7 @@
         <TableColumn text="ISBN" fx:id="isbnColumn"/>
         <TableColumn text="Title" fx:id="titleColumn"/>
         <TableColumn text="Author" fx:id="authorColumn"/>
+        <TableColumn text="Year" fx:id="yearColumn"/>
         <TableColumn text="Date Added" fx:id="dateAddedColumn"/>
         <TableColumn text="Available" fx:id="isAvailableColumn"/>
     </TableView>

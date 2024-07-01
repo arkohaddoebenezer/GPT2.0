@@ -7,13 +7,13 @@
 <?import javafx.scene.layout.VBox?>
 
 <VBox alignment="CENTER" spacing="10" xmlns:fx="http://javafx.com/fxml" fx:controller="org.trainingamalitech.librarymanagementsystem.controllers.TransactionViewController">
-    <TextField fx:id="transactionIdField" promptText="Transaction ID"/>
     <TextField fx:id="resourceIdField" promptText="Book ISBN"/>
     <TextField fx:id="resourceTypeField" promptText="Book ISBN"/>
     <TextField fx:id="patronIdField" promptText="Patron ID"/>
     <TextField fx:id="borrowDateField" promptText="Borrow Date (yyyy-mm-dd)"/>
     <TextField fx:id="returnDateField" promptText="Return Date (yyyy-mm-dd)"/>
-    <Button text="Add Transaction" onAction="#handleAddTransaction"/>
+    <Button text="Lend Book" onAction="#handleAddTransaction"/>
+    <Button text="Returned Book" onAction="#handleReturnBook"/>
 
     <TableView fx:id="transactionTable">
         <TableColumn text="Transaction ID" fx:id="transactionIdColumn"/>

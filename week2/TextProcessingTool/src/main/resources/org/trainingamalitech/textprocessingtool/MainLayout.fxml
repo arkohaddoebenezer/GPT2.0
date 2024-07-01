@@ -1,53 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.TextFlow?>
 
-<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="org.trainingamalitech.textprocessingtool.controllers.MainController">
-    <top>
-        <MenuBar>
-            <Menu text="File">
-                <MenuItem text="Open" onAction="#handleOpen"/>
-                <MenuItem text="Save" onAction="#handleSave"/>
-                <MenuItem text="Save As" onAction="#handleSaveAs"/>
-                <MenuItem text="Exit" onAction="#handleExit"/>
-            </Menu>
-            <Menu text="Edit">
-                <MenuItem text="Undo" onAction="#handleUndo"/>
-                <MenuItem text="Redo" onAction="#handleRedo"/>
-                <MenuItem text="Cut" onAction="#handleCut"/>
-                <MenuItem text="Copy" onAction="#handleCopy"/>
-                <MenuItem text="Paste" onAction="#handlePaste"/>
-            </Menu>
-            <Menu text="Regex">
-                <MenuItem text="Insert Pattern" onAction="#handleInsertPattern"/>
-                <MenuItem text="Test Pattern" onAction="#handleTestPattern"/>
-                <MenuItem text="Find" onAction="#handleFind"/>
-                <MenuItem text="Replace" onAction="#handleReplace"/>
-            </Menu>
-            <Menu text="Help">
-                <MenuItem text="About" onAction="#handleAbout"/>
-                <MenuItem text="Help" onAction="#handleHelp"/>
-            </Menu>
-        </MenuBar>
-    </top>
-    <center>
-        <VBox spacing="10">
+<VBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="org.trainingamalitech.textprocessingtool.controllers.MainController">
+    <children>
+        <TextArea fx:id="textArea" prefHeight="200" prefWidth="400" />
+        <ScrollPane fitToWidth="true" prefHeight="200" prefWidth="400">
+            <content>
+                <TextFlow fx:id="resultFlow" prefWidth="400" />
+            </content>
+        </ScrollPane>
+        <HBox spacing="10">
+            <Label text="Find:" />
+            <TextField fx:id="regexField" promptText="Word or Regular expression"  />
+            <Label text="Replace with:" />
+            <TextField fx:id="replaceField" />
+            <CheckBox fx:id="matchCase" text="Match Case" />
             <padding>
-
+                <Insets top="15.0" />
             </padding>
-            <TextArea fx:id="textArea" prefHeight="400" prefWidth="600"/>
-            <TextField fx:id="regexField" promptText="Enter Regex Pattern"/>
-            <TextField fx:id="replaceField" promptText="Enter Replacement Text"/>
-            <HBox spacing="10">
-                <Button text="Test Pattern" onAction="#handleTestPattern"/>
-                <Button text="Find" onAction="#handleFind"/>
-                <Button text="Replace" onAction="#handleReplace"/>
-            </HBox>
-            <TextArea fx:id="resultArea" prefHeight="200" prefWidth="600" editable="false"/>
-        </VBox>
-    </center>
-    <bottom>
-        <Label fx:id="statusLabel" text="Status: Ready" />
-    </bottom>
-</BorderPane>
+        </HBox>
+        <HBox spacing="10">
+            <Button onAction="#handleSearch" text="Search" />
+            <Button onAction="#handleReplace" text="Replace" />
+            <Button onAction="#handleTestPattern" text="Test Pattern" />
+            <Button onAction="#handleSavePattern" text="Save Pattern" />
+            <Button onAction="#handleReadPatterns" text="Show Saved Pattern" />
+         <padding>
+            <Insets top="15.0" />
+         </padding>
+        </HBox>
+        <Label fx:id="statusLabel" />
+    </children>
+</VBox>
