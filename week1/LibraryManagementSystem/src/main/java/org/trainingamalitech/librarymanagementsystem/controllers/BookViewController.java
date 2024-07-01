@@ -33,7 +33,7 @@ public class BookViewController {
     @FXML
     private TableColumn<Book, String> authorColumn;
     @FXML
-    private TableColumn<Book, String> yearColumn;
+    private TableColumn<Book, Integer> yearColumn;
     @FXML
     private TableColumn<Book, String> dateAddedColumn;
     @FXML
@@ -47,6 +47,7 @@ public class BookViewController {
         isbnColumn.setCellValueFactory(new PropertyValueFactory<>("isbn"));
         titleColumn.setCellValueFactory(new PropertyValueFactory<>("title"));
         authorColumn.setCellValueFactory(new PropertyValueFactory<>("author"));
+        yearColumn.setCellValueFactory(new PropertyValueFactory<>("year"));
         dateAddedColumn.setCellValueFactory(new PropertyValueFactory<>("created_at"));
         isAvailableColumn.setCellValueFactory(new PropertyValueFactory<>("isAvailable"));
 

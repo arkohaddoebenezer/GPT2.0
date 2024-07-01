@@ -2,17 +2,6 @@ public class LinkedListQueue {
     private Node front;
     private Node rear;
 
-    // Inner Node class
-    private class Node {
-        int value;
-        Node next;
-
-        Node(int value) {
-            this.value = value;
-            this.next = null;
-        }
-    }
-
   
     public LinkedListQueue() {
         front = null;
