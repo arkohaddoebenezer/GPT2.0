@@ -1,0 +1,5 @@
+127.0.0.1 - - [04/Jul/2024:11:52:38 +0000] "GET /advanced_sorting_algorithm HTTP/1.1" 302 -
+127.0.0.1 - - [04/Jul/2024:11:52:38 +0000] "GET /advanced_sorting_algorithm HTTP/1.1" 302 -
+127.0.0.1 - - [04/Jul/2024:11:52:40 +0000] "GET /advanced_sorting_algorithm/ HTTP/1.1" 200 71
+127.0.0.1 - - [04/Jul/2024:11:52:40 +0000] "GET /advanced_sorting_algorithm/ HTTP/1.1" 200 71
+127.0.0.1 - - [04/Jul/2024:11:52:54 +0000] "GET /advanced_sorting_algorithm/api/helloworld HTTP/1.1" 200 10
