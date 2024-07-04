@@ -162,3 +162,217 @@
 04-Jul-2024 11:56:21.132 INFO [Thread-1] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
 04-Jul-2024 11:56:21.155 INFO [Thread-1] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
 04-Jul-2024 11:56:21.174 INFO [Thread-1] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+04-Jul-2024 15:11:45.128 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.90
+04-Jul-2024 15:11:45.136 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jun 14 2024 14:45:13 UTC
+04-Jul-2024 15:11:45.136 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.90.0
+04-Jul-2024 15:11:45.136 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+04-Jul-2024 15:11:45.137 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+04-Jul-2024 15:11:45.137 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+04-Jul-2024 15:11:45.137 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-21
+04-Jul-2024 15:11:45.137 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.2+13-LTS-58
+04-Jul-2024 15:11:45.138 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+04-Jul-2024 15:11:45.138 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         G:\GPT 2.0\week3\lab\asa\.smarttomcat\advanced_sorting_algorithm
+04-Jul-2024 15:11:45.138 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Program Files\Apache Software Foundation\Tomcat 9.0
+04-Jul-2024 15:11:45.153 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+04-Jul-2024 15:11:45.153 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+04-Jul-2024 15:11:45.154 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+04-Jul-2024 15:11:45.154 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+04-Jul-2024 15:11:45.154 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+04-Jul-2024 15:11:45.154 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Program Files\Apache Software Foundation\Tomcat 9.0
+04-Jul-2024 15:11:45.155 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=G:\GPT 2.0\week3\lab\asa\.smarttomcat\advanced_sorting_algorithm
+04-Jul-2024 15:11:45.155 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=G:\GPT 2.0\week3\lab\asa\.smarttomcat\advanced_sorting_algorithm\temp
+04-Jul-2024 15:11:45.155 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=G:\GPT 2.0\week3\lab\asa\.smarttomcat\advanced_sorting_algorithm\conf\logging.properties
+04-Jul-2024 15:11:45.155 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+04-Jul-2024 15:11:45.155 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.1.3\lib\idea_rt.jar=14423:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.1.3\bin
+04-Jul-2024 15:11:45.156 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+04-Jul-2024 15:11:45.156 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stdout.encoding=UTF-8
+04-Jul-2024 15:11:45.156 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stderr.encoding=UTF-8
+04-Jul-2024 15:11:45.180 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\jdk-21\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\wamp64\bin\php\php8.2.0;C:\ProgramData\ComposerSetup\bin;C:\Program Files\nodejs\;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\wamp64\bin\php\php8.2.13;C:\Users\earkohaddo\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\earkohaddo\AppData\Local\Programs\Python\Python312\;C:\Users\earkohaddo\AppData\Local\Microsoft\WindowsApps;C:\Users\earkohaddo\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\earkohaddo\AppData\Roaming\Composer\vendor\bin;C:\Users\earkohaddo\AppData\Roaming\npm;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.1.3\bin;;C:\Program Files\Java\apache-maven-3.9.8\bin;;.]
+04-Jul-2024 15:11:46.484 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+04-Jul-2024 15:11:46.555 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [2201] milliseconds
+04-Jul-2024 15:11:46.736 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+04-Jul-2024 15:11:46.736 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.90]
+04-Jul-2024 15:11:46.883 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [G:\GPT 2.0\week3\lab\asa\.smarttomcat\advanced_sorting_algorithm\conf\Catalina\localhost\advanced_sorting_algorithm.xml]
+04-Jul-2024 15:11:51.730 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+04-Jul-2024 15:11:52.279 INFO [main] org.springframework.web.servlet.FrameworkServlet.initServletBean Initializing Servlet 'dispatcher'
+04-Jul-2024 15:11:54.256 INFO [main] org.springframework.web.servlet.FrameworkServlet.initServletBean Completed initialization in 1976 ms
+04-Jul-2024 15:11:54.295 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [G:\GPT 2.0\week3\lab\asa\.smarttomcat\advanced_sorting_algorithm\conf\Catalina\localhost\advanced_sorting_algorithm.xml] has finished in [7,410] ms
+04-Jul-2024 15:11:54.304 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+04-Jul-2024 15:11:54.386 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [7827] milliseconds
+04-Jul-2024 15:15:44.036 WARNING [http-nio-8080-exec-10] org.springframework.web.servlet.DispatcherServlet.noHandlerFound No mapping for GET /advanced_sorting_algorithm/api/helloworl
+04-Jul-2024 15:28:22.505 WARNING [http-nio-8080-exec-2] org.springframework.web.servlet.DispatcherServlet.noHandlerFound No mapping for GET /advanced_sorting_algorithm/css/style.css
+04-Jul-2024 15:28:22.565 WARNING [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet.noHandlerFound No mapping for GET /advanced_sorting_algorithm/css/style.css
+04-Jul-2024 15:28:25.525 WARNING [http-nio-8080-exec-5] org.springframework.web.servlet.DispatcherServlet.noHandlerFound No mapping for GET /advanced_sorting_algorithm/css/style.css
+04-Jul-2024 15:38:03.414 WARNING [http-nio-8080-exec-8] org.springframework.web.servlet.DispatcherServlet.noHandlerFound No mapping for GET /advanced_sorting_algorithm/css/style.css
+04-Jul-2024 15:39:07.477 WARNING [http-nio-8080-exec-10] org.springframework.web.servlet.DispatcherServlet.noHandlerFound No mapping for GET /advanced_sorting_algorithm/css/style.css
+04-Jul-2024 15:39:13.573 WARNING [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet.noHandlerFound No mapping for GET /advanced_sorting_algorithm/css/style.css
+04-Jul-2024 17:02:22.765 WARNING [http-nio-8080-exec-5] org.springframework.web.servlet.DispatcherServlet.noHandlerFound No mapping for GET /advanced_sorting_algorithm/advanced_sorting_algorithm/sort
+04-Jul-2024 17:03:47.800 WARNING [http-nio-8080-exec-9] org.springframework.web.servlet.DispatcherServlet.noHandlerFound No mapping for GET /advanced_sorting_algorithm/sort
+04-Jul-2024 17:04:52.422 INFO [Thread-1] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+04-Jul-2024 17:04:52.450 INFO [Thread-1] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+04-Jul-2024 17:04:52.610 INFO [Thread-1] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+04-Jul-2024 17:04:52.682 INFO [Thread-1] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+04-Jul-2024 17:05:01.642 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.90
+04-Jul-2024 17:05:01.651 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jun 14 2024 14:45:13 UTC
+04-Jul-2024 17:05:01.652 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.90.0
+04-Jul-2024 17:05:01.653 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+04-Jul-2024 17:05:01.653 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+04-Jul-2024 17:05:01.653 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+04-Jul-2024 17:05:01.653 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-21
+04-Jul-2024 17:05:01.655 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.2+13-LTS-58
+04-Jul-2024 17:05:01.655 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+04-Jul-2024 17:05:01.656 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         G:\GPT 2.0\week3\lab\asa\.smarttomcat\advanced_sorting_algorithm
+04-Jul-2024 17:05:01.656 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Program Files\Apache Software Foundation\Tomcat 9.0
+04-Jul-2024 17:05:01.673 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+04-Jul-2024 17:05:01.673 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+04-Jul-2024 17:05:01.674 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+04-Jul-2024 17:05:01.674 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+04-Jul-2024 17:05:01.674 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+04-Jul-2024 17:05:01.674 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Program Files\Apache Software Foundation\Tomcat 9.0
+04-Jul-2024 17:05:01.675 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=G:\GPT 2.0\week3\lab\asa\.smarttomcat\advanced_sorting_algorithm
+04-Jul-2024 17:05:01.675 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=G:\GPT 2.0\week3\lab\asa\.smarttomcat\advanced_sorting_algorithm\temp
+04-Jul-2024 17:05:01.675 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=G:\GPT 2.0\week3\lab\asa\.smarttomcat\advanced_sorting_algorithm\conf\logging.properties
+04-Jul-2024 17:05:01.675 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+04-Jul-2024 17:05:01.675 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.1.3\lib\idea_rt.jar=2378:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.1.3\bin
+04-Jul-2024 17:05:01.676 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+04-Jul-2024 17:05:01.676 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stdout.encoding=UTF-8
+04-Jul-2024 17:05:01.676 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stderr.encoding=UTF-8
+04-Jul-2024 17:05:01.699 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\jdk-21\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\wamp64\bin\php\php8.2.0;C:\ProgramData\ComposerSetup\bin;C:\Program Files\nodejs\;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\wamp64\bin\php\php8.2.13;C:\Users\earkohaddo\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\earkohaddo\AppData\Local\Programs\Python\Python312\;C:\Users\earkohaddo\AppData\Local\Microsoft\WindowsApps;C:\Users\earkohaddo\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\earkohaddo\AppData\Roaming\Composer\vendor\bin;C:\Users\earkohaddo\AppData\Roaming\npm;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.1.3\bin;;C:\Program Files\Java\apache-maven-3.9.8\bin;;.]
+04-Jul-2024 17:05:02.562 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+04-Jul-2024 17:05:02.648 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [1706] milliseconds
+04-Jul-2024 17:05:02.765 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+04-Jul-2024 17:05:02.765 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.90]
+04-Jul-2024 17:05:02.787 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [G:\GPT 2.0\week3\lab\asa\.smarttomcat\advanced_sorting_algorithm\conf\Catalina\localhost\advanced_sorting_algorithm.xml]
+04-Jul-2024 17:05:07.884 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+04-Jul-2024 17:05:08.391 INFO [main] org.springframework.web.servlet.FrameworkServlet.initServletBean Initializing Servlet 'dispatcher'
+04-Jul-2024 17:05:11.357 INFO [main] org.springframework.web.servlet.FrameworkServlet.initServletBean Completed initialization in 2966 ms
+04-Jul-2024 17:05:11.379 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [G:\GPT 2.0\week3\lab\asa\.smarttomcat\advanced_sorting_algorithm\conf\Catalina\localhost\advanced_sorting_algorithm.xml] has finished in [8,592] ms
+04-Jul-2024 17:05:11.387 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+04-Jul-2024 17:05:11.449 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [8798] milliseconds
+04-Jul-2024 17:06:32.518 INFO [Thread-1] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+04-Jul-2024 17:06:32.525 INFO [Thread-1] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+04-Jul-2024 17:06:32.548 INFO [Thread-1] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+04-Jul-2024 17:06:32.561 INFO [Thread-1] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+04-Jul-2024 22:59:23.857 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.90
+04-Jul-2024 22:59:23.864 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jun 14 2024 14:45:13 UTC
+04-Jul-2024 22:59:23.865 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.90.0
+04-Jul-2024 22:59:23.866 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+04-Jul-2024 22:59:23.866 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+04-Jul-2024 22:59:23.866 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+04-Jul-2024 22:59:23.866 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-21
+04-Jul-2024 22:59:23.867 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.2+13-LTS-58
+04-Jul-2024 22:59:23.867 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+04-Jul-2024 22:59:23.867 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         G:\GPT 2.0\week3\lab\asa\.smarttomcat\advanced_sorting_algorithm
+04-Jul-2024 22:59:23.867 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Program Files\Apache Software Foundation\Tomcat 9.0
+04-Jul-2024 22:59:23.881 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+04-Jul-2024 22:59:23.881 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+04-Jul-2024 22:59:23.882 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+04-Jul-2024 22:59:23.882 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+04-Jul-2024 22:59:23.882 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+04-Jul-2024 22:59:23.882 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Program Files\Apache Software Foundation\Tomcat 9.0
+04-Jul-2024 22:59:23.883 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=G:\GPT 2.0\week3\lab\asa\.smarttomcat\advanced_sorting_algorithm
+04-Jul-2024 22:59:23.883 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=G:\GPT 2.0\week3\lab\asa\.smarttomcat\advanced_sorting_algorithm\temp
+04-Jul-2024 22:59:23.883 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=G:\GPT 2.0\week3\lab\asa\.smarttomcat\advanced_sorting_algorithm\conf\logging.properties
+04-Jul-2024 22:59:23.886 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+04-Jul-2024 22:59:23.886 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.1.3\lib\idea_rt.jar=11188:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.1.3\bin
+04-Jul-2024 22:59:23.886 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+04-Jul-2024 22:59:23.887 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stdout.encoding=UTF-8
+04-Jul-2024 22:59:23.887 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stderr.encoding=UTF-8
+04-Jul-2024 22:59:23.906 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\jdk-21\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\wamp64\bin\php\php8.2.0;C:\ProgramData\ComposerSetup\bin;C:\Program Files\nodejs\;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\wamp64\bin\php\php8.2.13;C:\Users\earkohaddo\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\earkohaddo\AppData\Local\Programs\Python\Python312\;C:\Users\earkohaddo\AppData\Local\Microsoft\WindowsApps;C:\Users\earkohaddo\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\earkohaddo\AppData\Roaming\Composer\vendor\bin;C:\Users\earkohaddo\AppData\Roaming\npm;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.1.3\bin;;C:\Program Files\Java\apache-maven-3.9.8\bin;;.]
+04-Jul-2024 22:59:24.896 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+04-Jul-2024 22:59:25.006 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [2412] milliseconds
+04-Jul-2024 22:59:25.313 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+04-Jul-2024 22:59:25.314 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.90]
+04-Jul-2024 22:59:25.328 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [G:\GPT 2.0\week3\lab\asa\.smarttomcat\advanced_sorting_algorithm\conf\Catalina\localhost\advanced_sorting_algorithm.xml]
+04-Jul-2024 22:59:29.098 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+04-Jul-2024 22:59:29.580 INFO [main] org.springframework.web.servlet.FrameworkServlet.initServletBean Initializing Servlet 'dispatcher'
+04-Jul-2024 22:59:31.811 INFO [main] org.springframework.web.servlet.FrameworkServlet.initServletBean Completed initialization in 2230 ms
+04-Jul-2024 22:59:31.849 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [G:\GPT 2.0\week3\lab\asa\.smarttomcat\advanced_sorting_algorithm\conf\Catalina\localhost\advanced_sorting_algorithm.xml] has finished in [6,522] ms
+04-Jul-2024 22:59:31.858 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+04-Jul-2024 22:59:31.951 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [6943] milliseconds
+04-Jul-2024 23:09:57.709 INFO [Thread-1] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+04-Jul-2024 23:09:57.716 INFO [Thread-1] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+04-Jul-2024 23:09:57.755 INFO [Thread-1] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+04-Jul-2024 23:09:57.782 INFO [Thread-1] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+04-Jul-2024 23:10:04.051 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.90
+04-Jul-2024 23:10:04.059 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jun 14 2024 14:45:13 UTC
+04-Jul-2024 23:10:04.060 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.90.0
+04-Jul-2024 23:10:04.061 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+04-Jul-2024 23:10:04.061 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+04-Jul-2024 23:10:04.062 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+04-Jul-2024 23:10:04.062 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-21
+04-Jul-2024 23:10:04.063 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.2+13-LTS-58
+04-Jul-2024 23:10:04.063 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+04-Jul-2024 23:10:04.063 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         G:\GPT 2.0\week3\lab\asa\.smarttomcat\advanced_sorting_algorithm
+04-Jul-2024 23:10:04.064 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Program Files\Apache Software Foundation\Tomcat 9.0
+04-Jul-2024 23:10:04.079 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+04-Jul-2024 23:10:04.080 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+04-Jul-2024 23:10:04.080 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+04-Jul-2024 23:10:04.080 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+04-Jul-2024 23:10:04.080 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+04-Jul-2024 23:10:04.080 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Program Files\Apache Software Foundation\Tomcat 9.0
+04-Jul-2024 23:10:04.081 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=G:\GPT 2.0\week3\lab\asa\.smarttomcat\advanced_sorting_algorithm
+04-Jul-2024 23:10:04.081 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=G:\GPT 2.0\week3\lab\asa\.smarttomcat\advanced_sorting_algorithm\temp
+04-Jul-2024 23:10:04.081 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=G:\GPT 2.0\week3\lab\asa\.smarttomcat\advanced_sorting_algorithm\conf\logging.properties
+04-Jul-2024 23:10:04.081 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+04-Jul-2024 23:10:04.081 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.1.3\lib\idea_rt.jar=11237:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.1.3\bin
+04-Jul-2024 23:10:04.082 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+04-Jul-2024 23:10:04.082 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stdout.encoding=UTF-8
+04-Jul-2024 23:10:04.082 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stderr.encoding=UTF-8
+04-Jul-2024 23:10:04.117 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\jdk-21\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\wamp64\bin\php\php8.2.0;C:\ProgramData\ComposerSetup\bin;C:\Program Files\nodejs\;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\wamp64\bin\php\php8.2.13;C:\Users\earkohaddo\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\earkohaddo\AppData\Local\Programs\Python\Python312\;C:\Users\earkohaddo\AppData\Local\Microsoft\WindowsApps;C:\Users\earkohaddo\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\earkohaddo\AppData\Roaming\Composer\vendor\bin;C:\Users\earkohaddo\AppData\Roaming\npm;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.1.3\bin;;C:\Program Files\Java\apache-maven-3.9.8\bin;;.]
+04-Jul-2024 23:10:05.238 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+04-Jul-2024 23:10:05.298 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [1832] milliseconds
+04-Jul-2024 23:10:05.432 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+04-Jul-2024 23:10:05.433 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.90]
+04-Jul-2024 23:10:05.455 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [G:\GPT 2.0\week3\lab\asa\.smarttomcat\advanced_sorting_algorithm\conf\Catalina\localhost\advanced_sorting_algorithm.xml]
+04-Jul-2024 23:10:09.296 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+04-Jul-2024 23:10:09.796 INFO [main] org.springframework.web.servlet.FrameworkServlet.initServletBean Initializing Servlet 'dispatcher'
+04-Jul-2024 23:10:12.130 INFO [main] org.springframework.web.servlet.FrameworkServlet.initServletBean Completed initialization in 2334 ms
+04-Jul-2024 23:10:12.157 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [G:\GPT 2.0\week3\lab\asa\.smarttomcat\advanced_sorting_algorithm\conf\Catalina\localhost\advanced_sorting_algorithm.xml] has finished in [6,701] ms
+04-Jul-2024 23:10:12.166 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+04-Jul-2024 23:10:12.216 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [6916] milliseconds
+04-Jul-2024 23:10:12.413 WARNING [http-nio-8080-exec-1] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.logException Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+04-Jul-2024 23:13:43.877 WARNING [http-nio-8080-exec-5] org.springframework.web.servlet.DispatcherServlet.noHandlerFound No mapping for GET /advanced_sorting_algorithm/css/style.css
+04-Jul-2024 23:13:43.933 WARNING [http-nio-8080-exec-6] org.springframework.web.servlet.DispatcherServlet.noHandlerFound No mapping for GET /advanced_sorting_algorithm/css/style.css
+04-Jul-2024 23:15:07.120 WARNING [http-nio-8080-exec-1] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.logException Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+04-Jul-2024 23:29:18.543 INFO [Thread-1] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+04-Jul-2024 23:29:18.552 INFO [Thread-1] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+04-Jul-2024 23:29:18.579 INFO [Thread-1] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+04-Jul-2024 23:29:18.589 INFO [Thread-1] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+04-Jul-2024 23:29:58.169 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.90
+04-Jul-2024 23:29:58.181 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jun 14 2024 14:45:13 UTC
+04-Jul-2024 23:29:58.182 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.90.0
+04-Jul-2024 23:29:58.182 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+04-Jul-2024 23:29:58.183 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+04-Jul-2024 23:29:58.185 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+04-Jul-2024 23:29:58.185 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-21
+04-Jul-2024 23:29:58.185 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.2+13-LTS-58
+04-Jul-2024 23:29:58.186 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+04-Jul-2024 23:29:58.186 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         G:\GPT 2.0\week3\lab\asa\.smarttomcat\advanced_sorting_algorithm
+04-Jul-2024 23:29:58.186 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Program Files\Apache Software Foundation\Tomcat 9.0
+04-Jul-2024 23:29:58.201 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+04-Jul-2024 23:29:58.202 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+04-Jul-2024 23:29:58.202 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+04-Jul-2024 23:29:58.203 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+04-Jul-2024 23:29:58.203 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+04-Jul-2024 23:29:58.203 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Program Files\Apache Software Foundation\Tomcat 9.0
+04-Jul-2024 23:29:58.203 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=G:\GPT 2.0\week3\lab\asa\.smarttomcat\advanced_sorting_algorithm
+04-Jul-2024 23:29:58.204 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=G:\GPT 2.0\week3\lab\asa\.smarttomcat\advanced_sorting_algorithm\temp
+04-Jul-2024 23:29:58.205 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=G:\GPT 2.0\week3\lab\asa\.smarttomcat\advanced_sorting_algorithm\conf\logging.properties
+04-Jul-2024 23:29:58.205 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+04-Jul-2024 23:29:58.205 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.1.3\lib\idea_rt.jar=11577:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.1.3\bin
+04-Jul-2024 23:29:58.205 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+04-Jul-2024 23:29:58.207 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stdout.encoding=UTF-8
+04-Jul-2024 23:29:58.207 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stderr.encoding=UTF-8
+04-Jul-2024 23:29:58.244 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\jdk-21\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\wamp64\bin\php\php8.2.0;C:\ProgramData\ComposerSetup\bin;C:\Program Files\nodejs\;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\wamp64\bin\php\php8.2.13;C:\Users\earkohaddo\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\earkohaddo\AppData\Local\Programs\Python\Python312\;C:\Users\earkohaddo\AppData\Local\Microsoft\WindowsApps;C:\Users\earkohaddo\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\earkohaddo\AppData\Roaming\Composer\vendor\bin;C:\Users\earkohaddo\AppData\Roaming\npm;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.1.3\bin;;C:\Program Files\Java\apache-maven-3.9.8\bin;;.]
+04-Jul-2024 23:29:59.233 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+04-Jul-2024 23:29:59.278 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [1654] milliseconds
+04-Jul-2024 23:29:59.385 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+04-Jul-2024 23:29:59.385 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.90]
+04-Jul-2024 23:29:59.405 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [G:\GPT 2.0\week3\lab\asa\.smarttomcat\advanced_sorting_algorithm\conf\Catalina\localhost\advanced_sorting_algorithm.xml]
+04-Jul-2024 23:30:03.946 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+04-Jul-2024 23:30:04.587 INFO [main] org.springframework.web.servlet.FrameworkServlet.initServletBean Initializing Servlet 'dispatcher'
+04-Jul-2024 23:30:07.211 INFO [main] org.springframework.web.servlet.FrameworkServlet.initServletBean Completed initialization in 2624 ms
+04-Jul-2024 23:30:07.236 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [G:\GPT 2.0\week3\lab\asa\.smarttomcat\advanced_sorting_algorithm\conf\Catalina\localhost\advanced_sorting_algorithm.xml] has finished in [7,830] ms
+04-Jul-2024 23:30:07.249 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+04-Jul-2024 23:30:07.311 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [8030] milliseconds
