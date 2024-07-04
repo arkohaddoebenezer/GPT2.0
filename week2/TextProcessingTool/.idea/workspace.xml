@@ -9,7 +9,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="24d012a0-9f8a-49e5-87c8-22335e1a96be" name="Changes" comment="" />
+    <list default="true" id="24d012a0-9f8a-49e5-87c8-22335e1a96be" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week3/lab/ASA/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week3/lab/ASA/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week3/lab/ASA/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week3/lab/ASA/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week3/lab/ASA/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week3/lab/ASA/.smarttomcat/ASA/conf/catalina.policy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week3/lab/ASA/.smarttomcat/ASA/conf/catalina.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week3/lab/ASA/.smarttomcat/ASA/conf/context.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week3/lab/ASA/.smarttomcat/ASA/conf/jaspic-providers.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week3/lab/ASA/.smarttomcat/ASA/conf/jaspic-providers.xsd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week3/lab/ASA/.smarttomcat/ASA/conf/logging.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week3/lab/ASA/.smarttomcat/ASA/conf/server.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week3/lab/ASA/.smarttomcat/ASA/conf/tomcat-users.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week3/lab/ASA/.smarttomcat/ASA/conf/tomcat-users.xsd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week3/lab/ASA/.smarttomcat/ASA/conf/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week3/lab/ASA/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../week3/lab/ASA/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week3/lab/ASA/src/main/java/HomeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week3/lab/ASA/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../week3/lab/ASA/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week3/lab/ASA/src/main/webapp/about.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week3/lab/ASA/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../week3/lab/ASA/src/main/webapp/index.jsp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,7 +67,7 @@
     &quot;Application.TextProcessingTool.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;regex-module&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;advanced__sorting__algorithm&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;G:/GPT 2.0/week2/TextProcessingTool/src/main/java/org/trainingamalitech/textprocessingtool/jar files&quot;,
