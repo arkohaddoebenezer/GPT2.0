@@ -6,3 +6,8 @@
 127.0.0.1 - - [04/Jul/2024:11:55:51 +0000] "GET /advanced_sorting_algorithm HTTP/1.1" 302 -
 127.0.0.1 - - [04/Jul/2024:11:55:53 +0000] "GET /advanced_sorting_algorithm/ HTTP/1.1" 200 71
 127.0.0.1 - - [04/Jul/2024:11:56:11 +0000] "GET /advanced_sorting_algorithm/api/helloworld HTTP/1.1" 200 10
+127.0.0.1 - - [04/Jul/2024:15:12:00 +0000] "GET /advanced_sorting_algorithm HTTP/1.1" 302 -
+127.0.0.1 - - [04/Jul/2024:15:12:00 +0000] "GET /advanced_sorting_algorithm HTTP/1.1" 302 -
+127.0.0.1 - - [04/Jul/2024:15:12:03 +0000] "GET /advanced_sorting_algorithm/ HTTP/1.1" 200 436
+127.0.0.1 - - [04/Jul/2024:15:12:03 +0000] "GET /advanced_sorting_algorithm/ HTTP/1.1" 200 436
+127.0.0.1 - - [04/Jul/2024:15:12:04 +0000] "GET /favicon.ico HTTP/1.1" 404 682
