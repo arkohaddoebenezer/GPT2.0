@@ -1,10 +1,7 @@
 package org.trainingamalitech.utils;
 
 public class RadixSort {
-    public static void sort(int[] array) {
-        if (array.length == 0) {
-            return;
-        }
+    public static int[] sort(int[] array) {
 
         int[][] buckets = new int[10][array.length];
         int[] bucketCounts = new int[10];
@@ -35,5 +32,6 @@ public class RadixSort {
                 bucketCounts[j] = 0;
             }
         }
+        return array;
     }
 }

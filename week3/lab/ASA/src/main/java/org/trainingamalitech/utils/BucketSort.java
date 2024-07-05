@@ -3,11 +3,8 @@ package org.trainingamalitech.utils;
 import java.util.Arrays;
 
 public class BucketSort {
-    public static void bucketSort(int[] array, int bucketSize) {
-        if (array.length == 0) {
-            return;
-        }
-
+    public static int[] sort(int[] array, int bucketSize) {
+        
         // Determine minimum and maximum values
         int minValue = array[0];
         int maxValue = array[0];
@@ -37,6 +34,7 @@ public class BucketSort {
                 array[currentIndex++] = buckets[i][j];
             }
         }
+        return array;
     }
 
     private static int[] arrayAppend(int[] arr, int value) {

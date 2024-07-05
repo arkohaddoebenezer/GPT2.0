@@ -1,13 +1,14 @@
 package org.trainingamalitech.utils;
 
 public class MergeSort {
-    public static void sort(int[] arr, int l, int r) {
+    public static int[] sort(int[] arr, int l, int r) {
         if (l < r) {
             int m = (l + r) / 2;
             sort(arr, l, m);
             sort(arr, m + 1, r);
             merge(arr, l, m, r);
         }
+        return arr;
     }
 
     public static void merge(int[] arr, int l, int m, int r) {

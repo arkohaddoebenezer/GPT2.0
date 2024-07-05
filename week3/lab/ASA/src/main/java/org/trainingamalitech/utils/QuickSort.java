@@ -1,13 +1,15 @@
 package org.trainingamalitech.utils;
 
 public class QuickSort {
-    public static void sort(int[] arr, int low, int high) {
+
+    public static int[] sort(int[] arr, int low, int high) {
         if (low < high) {
             int pi = partition(arr, low, high);
 
             sort(arr, low, pi - 1);
             sort(arr, pi + 1, high);
         }
+        return arr;
     }
 
     public static int partition(int[] arr, int low, int high) {

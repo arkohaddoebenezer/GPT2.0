@@ -2,7 +2,7 @@ package org.trainingamalitech.utils;
 
 public class HeapSort {
 
-    static void sort(int[] arr) {
+    public static int[] sort(int[] arr) {
         int n = arr.length;
 
         // Build a max heap
@@ -15,6 +15,7 @@ public class HeapSort {
             arr[i] = temp;
             heapify(arr, i, 0);
         }
+        return arr;
     }
 
 
