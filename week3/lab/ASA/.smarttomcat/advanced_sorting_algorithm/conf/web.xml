@@ -432,7 +432,7 @@
   <!-- The servlet mappings for the built in servlets defined above.  Note  -->
   <!-- that, by default, the CGI and SSI servlets are *not* mapped.  You    -->
   <!-- must uncomment these mappings (or add them to your application's own -->
-  <!-- web.xml deployment descriptor) to enable these services              -->
+  <!-- web.xml deployment descriptor) to enable these utils              -->
 
     <!-- The mapping for the default servlet -->
     <servlet-mapping>
