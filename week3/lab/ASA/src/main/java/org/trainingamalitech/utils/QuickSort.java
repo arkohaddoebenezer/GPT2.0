@@ -2,17 +2,24 @@ package org.trainingamalitech.utils;
 
 public class QuickSort {
 
-    public static int[] sort(int[] arr, int low, int high) {
-        if (low < high) {
-            int pi = partition(arr, low, high);
-
-            sort(arr, low, pi - 1);
-            sort(arr, pi + 1, high);
+    public static int[] sort(int[] arr) {
+        if (arr == null || arr.length == 0) {
+            return arr;
         }
+        quickSort(arr, 0, arr.length - 1);
         return arr;
     }
 
-    public static int partition(int[] arr, int low, int high) {
+    private static void quickSort(int[] arr, int low, int high) {
+        if (low < high) {
+            int pi = partition(arr, low, high);
+
+            quickSort(arr, low, pi - 1);
+            quickSort(arr, pi + 1, high);
+        }
+    }
+
+    private static int partition(int[] arr, int low, int high) {
         int pivot = arr[high];
         int i = low - 1;
 

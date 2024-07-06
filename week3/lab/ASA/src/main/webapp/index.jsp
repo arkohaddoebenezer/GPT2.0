@@ -55,11 +55,11 @@
         <textarea name="user_input" id="user_input">${user_input}</textarea>
             <label for="sort_type">Select Sorting Algorithm</label>
             <select id="sort_type" name="sort_type">
-                <option value="Heap">Heap</option>
-                <option value="Quick">Quick</option>
-                <option value="Merge">Merge</option>
-                <option value="Radix">Radix</option>
-                <option value="Bucket">Bucket</option>
+                <option value="heap">Heap</option>
+                <option value="quick">Quick</option>
+                <option value="merge">Merge</option>
+                <option value="radix">Radix</option>
+                <option value="bucket">Bucket</option>
             </select>
             <input type="submit" value="Sort">
         </form>

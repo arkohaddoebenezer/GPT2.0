@@ -13,11 +13,11 @@ public class SortService {
     }
 
     public int[] mergeSort(int[] arr){
-        return MergeSort.sort(arr, 0, 0);
+        return MergeSort.sort(arr);
     }
 
     public int[] quickSort(int[] arr){
-       return QuickSort.sort(arr, 0, 0);
+       return QuickSort.sort(arr);
     }
 
     public int[] radixSort(int[] arr){
@@ -26,6 +26,6 @@ public class SortService {
     }
 
     public int[] bucketSort(int[] arr){
-        return BucketSort.sort(arr, 0);
+        return BucketSort.sort(arr);
     }
 }
