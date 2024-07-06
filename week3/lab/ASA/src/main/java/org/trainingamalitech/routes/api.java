@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 @RestController
 @RequestMapping("/api")
 public class api {
-        @RequestMapping("/helloworld")
+        @RequestMapping("/sort")
         public String handler(Model model) {
 
             HelloWorld helloWorld = new HelloWorld();

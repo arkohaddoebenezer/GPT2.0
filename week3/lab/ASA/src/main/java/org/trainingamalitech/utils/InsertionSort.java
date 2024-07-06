@@ -1,7 +1,22 @@
 package org.trainingamalitech.utils;
 
-public class InsertionSort {
-    public static void insertionSort(int[] arr) {
+import org.springframework.stereotype.Component;
+import org.trainingamalitech.contracts.SortingAlgorithm;
+
+@Component
+public class InsertionSort extends SortingAlgorithm {
+
+    public InsertionSort() {
+        this.timeComplexity = "O(n^2)";
+        this.spaceComplexity = "O(1)";
+    }
+
+    @Override
+    public int[] sort(int[] arr) {
+        if (arr == null || arr.length == 0) {
+            return arr;
+        }
+
         for (int i = 1; i < arr.length; i++) {
             int key = arr[i];
             int j = i - 1;
@@ -13,6 +28,7 @@ public class InsertionSort {
 
             arr[j + 1] = key;
         }
+        return arr;
     }
 
 }

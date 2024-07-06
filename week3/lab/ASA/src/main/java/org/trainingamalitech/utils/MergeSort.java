@@ -1,7 +1,17 @@
 package org.trainingamalitech.utils;
 
-public class MergeSort {
-    public static int[] sort(int[] arr) {
+import org.springframework.stereotype.Component;
+import org.trainingamalitech.contracts.SortingAlgorithm;
+
+@Component
+public class MergeSort extends SortingAlgorithm {
+    public MergeSort() {
+        this.timeComplexity = "O(n log n)";
+        this.spaceComplexity = "O(n)";
+    }
+
+    @Override
+    public int[] sort(int[] arr) {
         if (arr == null || arr.length == 0) {
             return arr;
         }
@@ -9,7 +19,7 @@ public class MergeSort {
         return arr;
     }
 
-    private static void mergeSort(int[] arr, int l, int r) {
+    private void mergeSort(int[] arr, int l, int r) {
         if (l < r) {
             int m = (l + r) / 2;
             mergeSort(arr, l, m);
@@ -18,7 +28,7 @@ public class MergeSort {
         }
     }
 
-    private static void merge(int[] arr, int l, int m, int r) {
+    private void merge(int[] arr, int l, int m, int r) {
         int n1 = m - l + 1;
         int n2 = r - m;
 
