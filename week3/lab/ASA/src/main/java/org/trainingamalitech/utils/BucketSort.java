@@ -19,6 +19,7 @@ public class BucketSort extends SortingAlgorithm {
 
     @Override
     public int[] sort(int[] array) {
+        long startTime = System.nanoTime();
         if (array.length == 0) {
             return array;
         }
@@ -54,7 +55,8 @@ public class BucketSort extends SortingAlgorithm {
                 array[currentIndex++] = i;
             }
         }
-
+        long endTime = System.nanoTime();
+        this.timeElapsed = endTime - startTime;
         return array;
     }
 

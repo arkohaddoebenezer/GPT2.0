@@ -13,6 +13,8 @@ public class RadixSort extends SortingAlgorithm {
 
     @Override
     public int[] sort(int[] array) {
+        long startTime = System.nanoTime();
+
         if (array == null || array.length == 0) {
             return array;
         }
@@ -46,6 +48,8 @@ public class RadixSort extends SortingAlgorithm {
                 bucketCounts[j] = 0;
             }
         }
+        long endTime = System.nanoTime();
+        this.timeElapsed = endTime - startTime;
         return array;
     }
 

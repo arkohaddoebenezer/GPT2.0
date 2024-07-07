@@ -16,6 +16,9 @@ public class SortService {
     private final MergeSort mergeSort;
     private final RadixSort radixSort;
     private final BucketSort bucketSort;
+    public long timeElapsed;
+    public String timeComplexity;
+    public  String spaceComplexity;
 
     @Autowired
     public SortService(QuickSort quickSort, HeapSort heapSort, MergeSort mergeSort, RadixSort radixSort, BucketSort bucketSort) {
@@ -31,17 +34,31 @@ public class SortService {
     }
 
     public int[] sort(int[] unsortedArray, String sortType) {
+        int[] sortedArray;
         switch (sortType.toLowerCase()) {
+
             case "heap":
-                return heapSort.sort(unsortedArray);
+                sortedArray = heapSort.sort(unsortedArray);
+                this.timeElapsed = heapSort.getTimeElapsed();
+                this.timeComplexity = heapSort.getTimeComplexity();
+                this.spaceComplexity = heapSort.getSpaceComplexity();
+                return sortedArray;
             case "merge":
-                return mergeSort.sort(unsortedArray);
+                sortedArray = mergeSort.sort(unsortedArray);
+                this.timeElapsed = mergeSort.getTimeElapsed();
+                return sortedArray;
             case "radix":
-                return radixSort.sort(unsortedArray);
+                sortedArray = radixSort.sort(unsortedArray);
+                this.timeElapsed = radixSort.getTimeElapsed();
+                return sortedArray;
             case "bucket":
-                return bucketSort.sort(unsortedArray);
+                sortedArray = bucketSort.sort(unsortedArray);
+                this.timeElapsed = bucketSort.getTimeElapsed();
+                return sortedArray;
             default:
-                return quickSort.sort(unsortedArray);
+                sortedArray = quickSort.sort(unsortedArray);
+                this.timeElapsed = quickSort.getTimeElapsed();
+                return sortedArray;
         }
     }
 }

@@ -13,6 +13,7 @@ public class HeapSort extends SortingAlgorithm {
 
     @Override
     public int[] sort(int[] arr) {
+        long startTime = System.nanoTime();
         int n = arr.length;
 
         // Build a max heap
@@ -30,6 +31,8 @@ public class HeapSort extends SortingAlgorithm {
             // Call max heapify on the reduced heap
             heapify(arr, i, 0);
         }
+        long endTime = System.nanoTime();
+        this.timeElapsed = endTime - startTime;
         return arr;
     }
 

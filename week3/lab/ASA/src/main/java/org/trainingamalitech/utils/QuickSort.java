@@ -13,10 +13,13 @@ public class QuickSort extends SortingAlgorithm {
 
     @Override
     public int[] sort(int[] arr) {
+        long startTime = System.nanoTime();
         if (arr == null || arr.length == 0) {
             return arr;
         }
         quickSort(arr, 0, arr.length - 1);
+        long endTime = System.nanoTime();
+        this.timeElapsed = endTime - startTime;
         return arr;
     }
 
