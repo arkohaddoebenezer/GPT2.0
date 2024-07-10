@@ -51,21 +51,22 @@
 
     <div class="container">
         <form action="/advanced_sorting_algorithm/sort" method="post">
-            <label for="fname">Input your array values here</label>
-        <textarea name="" id=""></textarea>
+            <label for="user_input">Input your values here</label>
+        <textarea name="user_input" id="user_input">${user_input}</textarea>
             <label for="sort_type">Select Sorting Algorithm</label>
             <select id="sort_type" name="sort_type">
-                <option value="Heap">Heap</option>
-                <option value="Quick">Quick</option>
-                <option value="Merge">Merge</option>
-                <option value="Radix">Radix</option>
-                <option value="Bucket">Bucket</option>
+                <option value="heap">Heap</option>
+                <option value="quick">Quick</option>
+                <option value="merge">Merge</option>
+                <option value="radix">Radix</option>
+                <option value="bucket">Bucket</option>
             </select>
             <input type="submit" value="Sort">
         </form>
     </div>
     <div class="container">
-        <input type="text" id="sort_array" value="${sort_type}" placeholder="sorted array">
+            <label for="display_sorted_array">${sort_type} Sorted</label>
+            <input type="text" id="display_sorted_array" value="${sorted_array}" placeholder="sorted array">
     </div>
 </body>
 

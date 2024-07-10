@@ -1,9 +1,22 @@
 package org.trainingamalitech.utils;
 
-public class RadixSort {
-    public static void sort(int[] array) {
-        if (array.length == 0) {
-            return;
+import org.springframework.stereotype.Component;
+import org.trainingamalitech.contracts.SortingAlgorithm;
+
+@Component
+public class RadixSort extends SortingAlgorithm {
+
+    public RadixSort() {
+        this.timeComplexity = "O(nk)";
+        this.spaceComplexity = "O(n + k)";
+    }
+
+    @Override
+    public int[] sort(int[] array) {
+        long startTime = System.nanoTime();
+
+        if (array == null || array.length == 0) {
+            return array;
         }
 
         int[][] buckets = new int[10][array.length];
@@ -19,9 +32,9 @@ public class RadixSort {
         int maxLength = (max + "").length();
 
         for (int i = 0, n = 1; i < maxLength; i++, n *= 10) {
-            for (int j = 0; j < array.length; j++) {
-                int digit = array[j] / n % 10;
-                buckets[digit][bucketCounts[digit]] = array[j];
+            for (int value : array) {
+                int digit = value / n % 10;
+                buckets[digit][bucketCounts[digit]] = value;
                 bucketCounts[digit]++;
             }
 
@@ -35,5 +48,9 @@ public class RadixSort {
                 bucketCounts[j] = 0;
             }
         }
+        long endTime = System.nanoTime();
+        this.timeElapsed = endTime - startTime;
+        return array;
     }
+
 }

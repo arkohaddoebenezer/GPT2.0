@@ -1,11 +1,27 @@
 package org.trainingamalitech.utils;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.trainingamalitech.contracts.SortingAlgorithm;
+
 import java.util.Arrays;
 
-public class BucketSort {
-    public static void bucketSort(int[] array, int bucketSize) {
+@Component
+public class BucketSort extends SortingAlgorithm {
+    private final InsertionSort insertionSort;
+
+    @Autowired
+    public BucketSort(InsertionSort insertionSort) {
+        this.insertionSort = insertionSort;
+        this.timeComplexity = "O(n + k)";
+        this.spaceComplexity = "O(n + k)";
+    }
+
+    @Override
+    public int[] sort(int[] array) {
+        long startTime = System.nanoTime();
         if (array.length == 0) {
-            return;
+            return array;
         }
 
         // Determine minimum and maximum values
@@ -19,24 +35,29 @@ public class BucketSort {
             }
         }
 
+        // Determine bucket size
+        int bucketSize = Math.max((maxValue - minValue) / array.length + 1, 1);
+
         // Initialize buckets
         int bucketCount = (maxValue - minValue) / bucketSize + 1;
         int[][] buckets = new int[bucketCount][0];
 
         // Distribute input array values into buckets
-        for (int i = 0; i < array.length; i++) {
-            int bucketIndex = (array[i] - minValue) / bucketSize;
-            buckets[bucketIndex] = arrayAppend(buckets[bucketIndex], array[i]);
+        for (int k : array) {
+            int bucketIndex = (k - minValue) / bucketSize;
+            buckets[bucketIndex] = arrayAppend(buckets[bucketIndex], k);
         }
 
-        // Sort buckets and place back into input array
         int currentIndex = 0;
-        for (int i = 0; i < buckets.length; i++) {
-            InsertionSort.insertionSort(buckets[i]);
-            for (int j = 0; j < buckets[i].length; j++) {
-                array[currentIndex++] = buckets[i][j];
+        for (int[] bucket : buckets) {
+            insertionSort.sort(bucket);
+            for (int i : bucket) {
+                array[currentIndex++] = i;
             }
         }
+        long endTime = System.nanoTime();
+        this.timeElapsed = endTime - startTime;
+        return array;
     }
 
     private static int[] arrayAppend(int[] arr, int value) {
