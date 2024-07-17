@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="beb06a78-177d-4ff7-a7a8-b2eb4ae30853" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/amalitechtraining/EccomerceApp/EcommerceAppApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/greetings.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/amalitechtraining/EccomerceApp/EcommerceAppApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/.smarttomcat/Ecommerce/conf/catalina.policy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/.smarttomcat/Ecommerce/conf/catalina.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/.smarttomcat/Ecommerce/conf/context.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/.smarttomcat/Ecommerce/conf/jaspic-providers.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/.smarttomcat/Ecommerce/conf/jaspic-providers.xsd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/.smarttomcat/Ecommerce/conf/logging.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/.smarttomcat/Ecommerce/conf/server.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/.smarttomcat/Ecommerce/conf/tomcat-users.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/.smarttomcat/Ecommerce/conf/tomcat-users.xsd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/.smarttomcat/Ecommerce/conf/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/conf/Catalina/localhost/ROOT.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/conf/catalina.policy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/conf/catalina.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/conf/context.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/conf/jaspic-providers.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/conf/jaspic-providers.xsd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/conf/logging.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/conf/server.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/conf/tomcat-users.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/conf/tomcat-users.xsd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/conf/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/logs/catalina.2024-07-10.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/logs/host-manager.2024-07-10.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/logs/localhost.2024-07-10.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/logs/localhost_access_log.2024-07-10.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/logs/manager.2024-07-10.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/src/main/java/org/amalitechtraining/ecommerce/EcommerceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/src/main/java/org/amalitechtraining/ecommerce/ServletInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/src/test/java/org/amalitechtraining/ecommerce/EcommerceApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2jJHhldeDs2LSQSckNtPlFbnP8W" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "frontend",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "G:/GPT 2.0/week4/lab/EccomerceApp",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="EcommerceAppApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="EccomerceApp" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.amalitechtraining.EccomerceApp.EcommerceAppApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="beb06a78-177d-4ff7-a7a8-b2eb4ae30853" name="Changes" comment="" />
+      <created>1721098381558</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1721098381558</updated>
+      <workItem from="1721098383322" duration="1683000" />
+      <workItem from="1721118522787" duration="170000" />
+      <workItem from="1721224656454" duration="261000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
