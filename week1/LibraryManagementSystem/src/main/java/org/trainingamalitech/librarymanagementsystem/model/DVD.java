@@ -19,7 +19,6 @@ public class DVD extends LibraryResource{
 
     @Override
     public ResourceType getResourceType() {
-        this.transactionHistory();
         return ResourceType.DVD;
     }
 

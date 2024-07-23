@@ -2,6 +2,7 @@ package org.trainingamalitech.librarymanagementsystem.services;
 
 import org.trainingamalitech.librarymanagementsystem.contracts.LibraryResourceOperations;
 import org.trainingamalitech.librarymanagementsystem.model.Book;
+import org.trainingamalitech.librarymanagementsystem.model.Journal;
 import org.trainingamalitech.librarymanagementsystem.model.LibraryResource;
 import org.trainingamalitech.librarymanagementsystem.util.DatabaseUtil;
 
@@ -69,13 +70,13 @@ public class JournalService implements LibraryResourceOperations {
         }
     }
 
-    public List<Book> fetchAllBooks() {
-        List<Book> books = new ArrayList<>();
-        String sql = "SELECT * FROM Book";
+    public List<Journal> fetchAllJournals() {
+        List<Journal> journals = new ArrayList<>();
+        String sql = "SELECT * FROM Journals";
         try (Connection connection = DatabaseUtil.getConnection();
              Statement statement = connection.createStatement();
              ResultSet resultSet = statement.executeQuery(sql)) {
-            System.out.println("Retrieving "+ books.getClass());
+            System.out.println("Retrieving "+ journals.getClass());
             while (resultSet.next()) {
                 String isbn = resultSet.getString("isbn");
                 String title = resultSet.getString("title");
@@ -84,15 +85,15 @@ public class JournalService implements LibraryResourceOperations {
                 int year = resultSet.getInt("year");
                 String dateAdded = resultSet.getString("created_at");
                 boolean availability = resultSet.getBoolean("isAvailable");
-                Book journal = new Book(isbn,title,author,publisher,year,dateAdded,availability);
+                Journal journal = new Journal(isbn,title,author,publisher,year,dateAdded,availability);
                 System.out.println("Title: "+resultSet.getString("title"));
-                books.add(journal);
+                journals.add(journal);
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
-        return books;
+        return journals;
     }
 
 

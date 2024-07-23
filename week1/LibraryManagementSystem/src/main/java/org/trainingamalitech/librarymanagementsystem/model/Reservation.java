@@ -65,4 +65,8 @@ public class Reservation {
     public void setReservationId(int reservationId) {
         this.reservationId =reservationId;
     }
+
+    public int getReservationId() {
+        return reservationId;
+    }
 }

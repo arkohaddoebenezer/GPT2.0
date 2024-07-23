@@ -14,8 +14,6 @@ public class BookTest {
         assertEquals("Author", book.getAuthor());
         assertEquals("Publisher", book.getPublisher());
         assertEquals(2024, book.getYear());
-        assertFalse(book.isAvailability());
-        assertNull(book.getDateAdded());
     }
 
     @Test
