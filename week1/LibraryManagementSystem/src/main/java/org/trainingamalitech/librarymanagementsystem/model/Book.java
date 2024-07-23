@@ -22,4 +22,7 @@ public class Book extends LibraryResource{
         return "Book [ISBN=" + this.getId() + ", Title=" + this.getTitle() + ", Author=" + this.getAuthor() + ", Publisher=" + this.getPublisher() + ", Year=" + this.getYear() + ", Available=" + this.getAvailability() + "]";
     }
 
+    public boolean isAvailability() {
+        return this.isAvailable;
     }
+}

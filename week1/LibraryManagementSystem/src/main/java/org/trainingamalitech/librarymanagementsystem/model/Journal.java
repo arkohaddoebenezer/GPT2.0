@@ -11,7 +11,7 @@ public class Journal extends LibraryResource {
         super(id, title, author, publisher, year);
     }
 
-    protected Journal(String id, String title, String author, String publisher, int year, String dateAdded, boolean availability) {
+    public Journal(String id, String title, String author, String publisher, int year, String dateAdded, boolean availability) {
         super(id, title, author, publisher, year, dateAdded, availability);
     }
 
