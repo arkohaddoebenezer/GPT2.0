@@ -9,7 +9,9 @@ import org.trainingamalitech.librarymanagementsystem.model.Book;
 import org.trainingamalitech.librarymanagementsystem.model.LibraryResource;
 import org.trainingamalitech.librarymanagementsystem.model.Transaction;
 import org.trainingamalitech.librarymanagementsystem.services.BookService;
+import org.trainingamalitech.librarymanagementsystem.util.DatabaseUtil;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public class BookViewController {
@@ -42,7 +44,7 @@ public class BookViewController {
     private BookService bookService;
 
     @FXML
-    public void initialize() {
+    public void initialize() throws SQLException {
         bookService = new BookService();
         isbnColumn.setCellValueFactory(new PropertyValueFactory<>("isbn"));
         titleColumn.setCellValueFactory(new PropertyValueFactory<>("title"));
